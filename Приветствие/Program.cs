@@ -1,4 +1,5 @@
-﻿namespace meeting;
+﻿using System;
+namespace meeting;
 
 public static class Program
 {
@@ -6,7 +7,10 @@ public static class Program
 
     public static void Main(string[] args)
     {
-        Console.WriteLine($"Hello {Name}!");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write($"Hello");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.Write($" {Name}");
         Console.ReadKey();
     }
 }
