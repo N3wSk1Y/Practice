@@ -1,5 +1,5 @@
 ﻿using System;
-namespace meeting;
+namespace practice1;
 
 public static class Program
 {
@@ -20,7 +20,7 @@ public static class Program
         name = Console.ReadLine();
         Console.WriteLine("Введите дробное число");
         f = double.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
-
+        
         Console.WriteLine($"\nПривет, {name}");
         Console.WriteLine("*********************************");
         Console.WriteLine("*\tЯ твой компьютер!\t*");        
