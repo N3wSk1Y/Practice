@@ -8,8 +8,8 @@ public static class Program
         string name;
         double f;
         double r = 64.100;
-        double p1 = 0.78932597F;
-        double pr = 100000000000f;
+        float p1 = 0.78932597F;
+        float pr = 100000000000f;
         double f1 = 3.20000;
         decimal dec = 18500.5m;
         int s1 = 4;
