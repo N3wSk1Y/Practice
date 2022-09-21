@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace practice3;
 
 public static class Program
