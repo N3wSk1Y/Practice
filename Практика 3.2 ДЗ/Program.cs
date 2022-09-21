@@ -60,14 +60,6 @@ public static class Program
         Console.ReadKey();
     }
 
-    private static void Task4()
-    {
-        string[] parameters = Console.ReadLine().Replace(" ", "").Split(',');
-        int a = int.Parse(parameters[0]);
-        int b = int.Parse(parameters[1]);
-        int c = int.Parse(parameters[2]);
-        
-    }
     private static void Task5()
     {
         char sybmol = char.Parse(Console.ReadLine().ToLower());
@@ -84,10 +76,5 @@ public static class Program
             case 'u': Console.WriteLine("Гласная"); break;
             default: Console.WriteLine("Согласная"); break;
         }
-    }
-
-    public static void Main()
-    {
-        Task4();
     }
 }
