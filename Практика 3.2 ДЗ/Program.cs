@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace practice3;
 
 public static class Program
@@ -24,8 +24,15 @@ public static class Program
 
     private static void Task2()
     {
-        int sybmol = int.Parse(Console.ReadLine());
-        string result = 9 - sybmol >= 0 ? "Да" : "Нет";
+        string input = Console.ReadLine();
+        // if (!int.TryParse(input, out var number))
+        // {
+        //     Console.WriteLine("Нет"); 
+        //     Console.ReadKey(); return;
+        // }
+        int sybmol = int.Parse(input);
+        // string result = 9 - sybmol >= 0 ? "Да" : "Нет";
+        string result = sybmol >= 0 ? 10 > sybmol ? "Yes" : "No" : "No";
         Console.WriteLine(result);
         Console.ReadKey();
     }
@@ -60,6 +67,16 @@ public static class Program
         Console.ReadKey();
     }
 
+    private static void Task4()
+    {
+        string[] parameters = Console.ReadLine().Replace(" ", "").Split(',');
+        int a = int.Parse(parameters[0]);
+        int b = int.Parse(parameters[1]);
+        int c = int.Parse(parameters[2]);
+        string r = (a - b) * (a - c) * (b - c) == 0 ? "Yes" : "No";
+        Console.WriteLine(r);
+        Console.ReadKey();
+    }
     private static void Task5()
     {
         char sybmol = char.Parse(Console.ReadLine().ToLower());
