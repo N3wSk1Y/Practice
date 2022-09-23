@@ -25,14 +25,8 @@ public static class Program
     private static void Task2()
     {
         string input = Console.ReadLine();
-        // if (!int.TryParse(input, out var number))
-        // {
-        //     Console.WriteLine("Нет"); 
-        //     Console.ReadKey(); return;
-        // }
-        int sybmol = int.Parse(input);
-        // string result = 9 - sybmol >= 0 ? "Да" : "Нет";
-        string result = sybmol >= 0 ? 10 > sybmol ? "Yes" : "No" : "No";
+        int number = int.Parse(input);
+        string result = (number+10) / 10 == 1 ? "Yes" : "No";
         Console.WriteLine(result);
         Console.ReadKey();
     }
@@ -43,7 +37,7 @@ public static class Program
         double a = double.Parse(parameters[0]);
         double b = double.Parse(parameters[1]);
         double c = double.Parse(parameters[2]);
-        double D = Math.Pow(b, 2) - 4 * a * c;;
+        double D = Math.Pow(b, 2) - 4 * a * c;
 
         Console.Write($"Уравнение с коэффициентами {a}, {b}, {c} ");
         if (D >= 0)
@@ -93,5 +87,10 @@ public static class Program
             case 'u': Console.WriteLine("Гласная"); break;
             default: Console.WriteLine("Согласная"); break;
         }
+    }
+
+    public static void Main()
+    {
+        Task2();
     }
 }
