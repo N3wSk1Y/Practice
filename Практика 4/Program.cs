@@ -39,6 +39,7 @@ public static class Program
 
     public static void Main()
     {
-        
+        Task1(60, 2);
+        Console.ReadKey();
     }
 }
