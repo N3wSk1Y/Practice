@@ -13,8 +13,7 @@ public static class Program
     
     private static void Task2(int n)
     {
-        if (n >= 1440)
-            n %= 1440;
+        n %= 1440;
         
         int hours = n / 60;
         int minutes = n % 60;
@@ -23,8 +22,7 @@ public static class Program
     
     private static void Task3(int n)
     {
-        if (n >= 86400)
-            n %= 86400;
+        n %= 86400;
         
         int hours = n / 3600;
         int minutes = (n - hours * 3600) / 60;
