@@ -3,32 +3,31 @@ namespace practice3;
 
 public static class Program
 {
-    private static void Task1()
+    private static string Task1()
     {
         int range = int.Parse(Console.ReadLine());
         if (range >= 30)
         {
-            Console.WriteLine("Перелет!");
+            return "Перелет!";
         }
         else if (range >= 28)
         {
-            Console.WriteLine("Попал!");
+            return "Попал!";
         }
         else if (range >= 0)
         {
-            Console.WriteLine("Недолет!");
+            return "Недолет!";
         }
 
         Console.ReadKey();
     }
 
-    private static void Task2()
+    private static string Task2()
     {
         string input = Console.ReadLine();
         int number = int.Parse(input);
         string result = (number+10) / 10 == 1 ? "Yes" : "No";
-        Console.WriteLine(result);
-        Console.ReadKey();
+        return result;
     }
     
     private static void Task3()
@@ -61,17 +60,16 @@ public static class Program
         Console.ReadKey();
     }
 
-    private static void Task4()
+    private static string Task4()
     {
         string[] parameters = Console.ReadLine().Replace(" ", "").Split(',');
         int a = int.Parse(parameters[0]);
         int b = int.Parse(parameters[1]);
         int c = int.Parse(parameters[2]);
         string r = (a - b) * (a - c) * (b - c) == 0 ? "Yes" : "No";
-        Console.WriteLine(r);
-        Console.ReadKey();
+        return r;
     }
-    private static void Task5()
+    private static string Task5()
     {
         char sybmol = char.Parse(Console.ReadLine().ToLower());
         // string vowels = "aeiou";
@@ -80,17 +78,12 @@ public static class Program
 
         switch (sybmol)
         {
-            case 'a': Console.WriteLine("Гласная"); break;
-            case 'e': Console.WriteLine("Гласная"); break;
-            case 'i': Console.WriteLine("Гласная"); break;
-            case 'o': Console.WriteLine("Гласная"); break;
-            case 'u': Console.WriteLine("Гласная"); break;
-            default: Console.WriteLine("Согласная"); break;
+            case 'a': return "Гласная";
+            case 'e': return "Гласная";
+            case 'i': return "Гласная";
+            case 'o': return "Гласная";
+            case 'u': return "Гласная";
+            default: return "Согласная";
         }
-    }
-
-    public static void Main()
-    {
-        Task2();
     }
 }
