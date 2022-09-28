@@ -3,16 +3,17 @@ namespace practice5;
 
 class Program
 {
+    static bool includedInArea(float x, float y) // Вариант 10
+    {
+        if (Math.Pow(x, 2) + Math.Pow(y, 2) < 16)
+            if (y <= 4 - x)
+                if (y <= 4 + x)
+                    return true;
+        return false;
+    }
+
     static void Main(string[] args)
     {
-        float x = float.Parse(Console.ReadLine());
-        float y = float.Parse(Console.ReadLine());
-        if (y <= 2 - x)
-            if (y >= 0)
-                if (y >= x * x)
-                    Console.Write("принадлежит");
-                else
-                    Console.Write(" не принадлежит");
-        Console.ReadKey();
+        Console.WriteLine(includedInArea(0, -4.5f));
     }
 }
