@@ -1,5 +1,5 @@
 using System;
-namespace practice3;
+namespace practice32;
 
 public static class Program
 {
@@ -14,12 +14,10 @@ public static class Program
         {
             return "Попал!";
         }
-        else if (range >= 0)
+        else
         {
             return "Недолет!";
         }
-
-        Console.ReadKey();
     }
 
     private static string Task2()
