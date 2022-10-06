@@ -14,7 +14,7 @@ internal class Program
 
     private static double UValue(float x, float y)
     {
-        Console.WriteLine(includedInArea(x, y));
+        Console.WriteLine(includedInArea(x, y)); // Test
         if (includedInArea(x, y))
             return Math.Abs(1 - x * y);
         else
@@ -23,6 +23,6 @@ internal class Program
 
     public static void Main(string[] args)
     {
-        Console.WriteLine(UValue(0, -4.5f));
+        Console.WriteLine(UValue(1, 4));
     }
 }
