@@ -31,6 +31,13 @@ internal class Program
         if (max < c) max = c;
         return max;
     }
+    private static double Max(double a, double b, double c)
+    {
+        if (a >= b)
+            return a;
+        else
+            return b;
+    }
     private static double Task(double a, double b) // 15 вариант
     {
         return Min(Max(a + 5, Min(2 - b, Math.Pow(a, 2)+1, a/b)), Min(a, b - 5, Math.Pow(a, 1/3f)), 0) + 3 * Max(a, 3 / a - 5);
