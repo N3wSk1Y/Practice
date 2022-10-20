@@ -5,7 +5,9 @@ internal class Program
 {
     private static int FindSecondMax(int N) // Вариант 17
     {
+        Console.WriteLine("Введите максимальное число 1 по умолчанию.");
         int max1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите максимальное число 2 по умолчанию.");
         int max2 = int.Parse(Console.ReadLine());
 
         if (max2 > max1)
@@ -25,10 +27,9 @@ internal class Program
             }
             else if (input > max2)
                 max2 = input;
-            
         }
+
         return max2;
-        
     }
     
     public static void Main(string[] args)
