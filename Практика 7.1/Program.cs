@@ -1,22 +1,14 @@
-﻿using System;
+﻿// Фоновая 2
 namespace practice71;
 
 internal class Program
 {
     private static int FindSecondMax(int N) // Вариант 17
     {
-        Console.WriteLine("Введите максимальное число 1 по умолчанию.");
-        int max1 = int.Parse(Console.ReadLine());
-        Console.WriteLine("Введите максимальное число 2 по умолчанию.");
-        int max2 = int.Parse(Console.ReadLine());
+        int max1 = Int32.MinValue;
+        int max2 = Int32.MinValue;
 
-        if (max2 > max1)
-        {
-            int c = max1;
-            max1 = max2;
-            max2 = c;
-        }
-        
+        Console.WriteLine($"Введите {N} чисел через Enter");
         for (int i = 0; i < N; i++)
         {
             int input = int.Parse(Console.ReadLine());
@@ -26,7 +18,8 @@ internal class Program
                 max1 = input;
             }
             else if (input > max2)
-                max2 = input;
+                    if (input != max1)
+                        max2 = input;
         }
 
         return max2;
@@ -34,6 +27,14 @@ internal class Program
     
     public static void Main(string[] args)
     {
-        Console.WriteLine($"Второй максимум: {FindSecondMax(5)}");
+        int max2 = FindSecondMax(5);
+        if (max2 == Int32.MinValue)
+        {
+            Console.WriteLine("Второго максимума нет");
+        }
+        else
+        {
+            Console.WriteLine($"Второй максимум: {FindSecondMax(5)}");
+        }
     }
 }
