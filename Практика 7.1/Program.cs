@@ -34,7 +34,7 @@ internal class Program
         }
         else
         {
-            Console.WriteLine($"Второй максимум: {FindSecondMax(5)}");
+            Console.WriteLine($"Второй максимум: {max2}");
         }
     }
 }

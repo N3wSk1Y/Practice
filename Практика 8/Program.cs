@@ -41,6 +41,35 @@ internal class Program
         return sum;
     }
 
+    private static bool IsHappyNumber(int a)
+    {
+        a = Math.Abs(a);
+        if (a < 10)
+            return false;
+        int counter = 0, sum1 = 0, sum2 = 0, aa = a;
+        while (a > 0)
+        {
+            a /= 10;
+            counter++;
+        }
+
+        for (int i = 0; i < counter; i++)
+        {
+            if (i < counter / 2 && counter % 2 == 1)
+                sum1 += aa % 10;
+            else if (i == counter / 2 && counter % 2 == 1)
+            {
+                sum1 += aa % 10;
+                sum2 += aa % 10;
+            }
+            else sum2 += aa % 10;
+
+            aa /= 10;
+        }
+
+        return sum1 == sum2;
+    }
+    
     public static void Main(string[] args)
     {
         Console.WriteLine($"Остаток от деления: {Remainder(17, 5)}");
@@ -50,5 +79,6 @@ internal class Program
         else
             Console.WriteLine("NO");
         Console.WriteLine(Task2(1587662));
+        Console.WriteLine(IsHappyNumber(4571862));
     }
 }
