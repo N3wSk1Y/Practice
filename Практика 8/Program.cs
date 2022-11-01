@@ -63,22 +63,56 @@ internal class Program
                 sum2 += aa % 10;
             }
             else sum2 += aa % 10;
-
             aa /= 10;
         }
 
         return sum1 == sum2;
     }
+
+    private static void PerfectNumbers(int n)
+    {
+        for (int m = 1; m < n; m++)
+        {
+            int sum = 1;
+            for (int i = 2; i <= Math.Sqrt(m); i++)
+            {
+                if (m % i == 0)
+                    sum += i + m / i;
+            }
+            if (sum == m) 
+                Console.WriteLine(m);
+        }
+    }
+
+    private static int Task5(int a)
+    {
+        int result = 0, number;
+        bool positive = true;
+        while (a > 0)
+        {
+            number = a % 10;
+            a /= 10;
+            if (positive)
+                result += number;
+            else
+                result -= number;
+            positive = !positive;
+        }
+
+        return result;
+    }
     
     public static void Main(string[] args)
     {
-        Console.WriteLine($"Остаток от деления: {Remainder(17, 5)}");
-        int t1 = Task1(123123465);
-        if (t1 > 0)
-            Console.WriteLine($"Чисел, подходящих под условия: {t1}");
-        else
-            Console.WriteLine("NO");
-        Console.WriteLine(Task2(1587662));
-        Console.WriteLine(IsHappyNumber(4571862));
+        // Console.WriteLine($"Остаток от деления: {Remainder(17, 5)}");
+        // int t1 = Task1(123123465);
+        // if (t1 > 0)
+        //     Console.WriteLine($"Чисел, подходящих под условия: {t1}");
+        // else
+        //     Console.WriteLine("NO");
+        // Console.WriteLine(Task2(1587662));
+        // Console.WriteLine(IsHappyNumber(4571862));
+        // PerfectNumbers(20);
+        Console.WriteLine(Task5(4587315));
     }
 }
