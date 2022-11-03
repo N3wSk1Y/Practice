@@ -101,7 +101,19 @@ internal class Program
 
         return result;
     }
-    
+
+    private static bool IsDegree(float N, float m)
+    {
+        while (N >= 1)
+        {
+            N /= m;
+            if (N == 1)
+                return true;
+        }
+
+        return false;
+    }
+
     public static void Main(string[] args)
     {
         // Console.WriteLine($"Остаток от деления: {Remainder(17, 5)}");
@@ -113,6 +125,7 @@ internal class Program
         // Console.WriteLine(Task2(1587662));
         // Console.WriteLine(IsHappyNumber(4571862));
         // PerfectNumbers(20);
-        Console.WriteLine(Task5(4587315));
+        // Console.WriteLine(Task5(4587315));
+        // Console.WriteLine(IsDegree(8, 2));
     }
 }
