@@ -114,6 +114,14 @@ internal class Program
         return false;
     }
 
+    private static int Reminder(float n, float m)
+    {
+        float division = n / m;
+        string zeroReminder = (division - (int)division).ToString();
+        int result = int.Parse(zeroReminder.Substring(2));
+        return result;
+    }
+    
     public static void Main(string[] args)
     {
         // Console.WriteLine($"Остаток от деления: {Remainder(17, 5)}");
@@ -127,5 +135,6 @@ internal class Program
         // PerfectNumbers(20);
         // Console.WriteLine(Task5(4587315));
         // Console.WriteLine(IsDegree(8, 2));
+        // Console.WriteLine(Reminder(10f, 3f));
     }
 }
