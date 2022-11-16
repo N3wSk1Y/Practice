@@ -24,15 +24,16 @@ internal class Program
 
     public static void Task3(int a)
     {
+        int m;
         for (int i = 31; i >= 0; i--)
         {
-            int m = 1 << i;
+            m = 1 << i;
             Console.Write((a & m) == 0 ? 0 : 1);
         }
     }
     
     public static void Main(string[] args)
     {
-        Task3(5);
+        Task3(413 >> 3);
     }
 }
