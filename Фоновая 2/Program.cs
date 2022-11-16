@@ -66,8 +66,12 @@ internal class Program
     
     public static void Main(string[] args)
     {
-        uint n = 3, x1 = 413;
+        uint n = 3, x1 = 5;
         int x2 = 5;
+        Console.WriteLine("Введите числа n, x1, x2 через Enter.");
+        n = Convert.ToUInt32(Console.ReadLine());
+        x1 = Convert.ToUInt32(Console.ReadLine());
+        x2 = Convert.ToInt32(Console.ReadLine());
 
         int nullBitsAmount = FindNullBitsAmount(x1);
         Console.WriteLine($"Число {x1} имеет {nullBitsAmount} нулей двоичной системе.");
