@@ -22,7 +22,7 @@ internal class Program
         return (X & m) == 0 ? 0 : 1;
     }
 
-    public static void Task3(int a)
+    private static void Task3(int a)
     {
         int m;
         for (int i = 31; i >= 0; i--)
@@ -34,6 +34,8 @@ internal class Program
     
     public static void Main(string[] args)
     {
-        Task3(413 >> 3);
+        int X = 5, N = 2, a = 7;
+        Console.WriteLine(Task2(X, N));
+        Task3(a);
     }
 }

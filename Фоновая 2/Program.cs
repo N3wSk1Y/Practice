@@ -39,29 +39,9 @@ internal class Program
         return result;
     }
 
-    private static string CyclicRightShift(uint x1, uint n)
+    private static int CyclicRightShift(int x1, int n)
     {
-        string result = "";
-        int t;
-        int m ;
-        for (int nn = (int)n ; nn >= 0; nn--)
-        {
-            t = (x1 & 1 << 1) == 0 ? 0 : 1;
-            x1 >>= 1;
-            if (t == 1)
-            {
-                x1 |= 2147483648;
-            }
-            n--;
-        }
-
-        for (int i = 31; i >= 0; i--)
-        { 
-            m = 1 << i;
-            result += (x1 & m) == 0 ? 0 : 1;
-        }
-
-        return result;
+        return ( x1 << n ) | ( x1 >> (32 - n) );
     }
     
     public static void Main(string[] args)
@@ -79,7 +59,7 @@ internal class Program
         string convertedNumber = ConvertToBits(x2);
         Console.WriteLine($"Число {x2} имеет представление {convertedNumber} в двоичной системе без ведущих нулей.");
         
-        string shiftedNumber = CyclicRightShift(x1, n);
+        int shiftedNumber = CyclicRightShift((int)x1, (int)n);
         Console.WriteLine($"Число {x1} при цикличном сдвиге вправо на {n} имеет представление {shiftedNumber} в двоичной системе.");
     }
 }
