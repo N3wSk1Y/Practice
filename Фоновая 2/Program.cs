@@ -41,7 +41,7 @@ internal class Program
 
     private static int CyclicRightShift(int x1, int n)
     {
-        return ( x1 << n ) | ( x1 >> (32 - n) );
+        return ( x1 << n ) | ( x1 >> (0x20 - n) );
     }
     
     public static void Main(string[] args)
