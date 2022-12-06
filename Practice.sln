@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle", "Triangle\Triang
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 2", "Фоновая 2\Фоновая 2.csproj", "{F2B3C035-3595-4ABC-BC5C-1660C5CA5E32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 2.2", "Фоновая 2.2\Фоновая 2.2.csproj", "{1EFA05C9-C12D-4C2C-BF18-BD7A69594978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{F2B3C035-3595-4ABC-BC5C-1660C5CA5E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2B3C035-3595-4ABC-BC5C-1660C5CA5E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2B3C035-3595-4ABC-BC5C-1660C5CA5E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EFA05C9-C12D-4C2C-BF18-BD7A69594978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFA05C9-C12D-4C2C-BF18-BD7A69594978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFA05C9-C12D-4C2C-BF18-BD7A69594978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFA05C9-C12D-4C2C-BF18-BD7A69594978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
