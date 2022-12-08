@@ -9,28 +9,66 @@ internal class Program
         switch (command)
         {
             case "/write": // Занести
-                
+                if (argument is >= 1 and <= 15)
+                {
+                    WriteNumber(ref number, argument);
+                }
+                else
+                    Console.WriteLine("Число должно быть в диапазоне от 1 до 15");
                 break;
             case "/read": // Прочитать
-
+                if (argument is >= 0 and <= 15)
+                {
+                    Console.WriteLine($"Число в ячейке {argument}: " + ReadSector(number, argument));
+                }
+                else
+                    Console.WriteLine("Ячейка должна быть в диапазоне от 0 до 15");
+    
                 break;
             case "/clear": // Очистить
-
+                if (argument is >= 0 and <= 15)
+                {
+                    ClearSector(ref number, argument);
+                    Console.WriteLine($"Ячейка {argument} очищена.");
+                }
+                else
+                    Console.WriteLine("Ячейка должна быть в диапазоне от 0 до 15");
                 break;
             default:
                 Console.WriteLine("\nНеверная команда.");
-                AwaitCommand();
                 break;
         }
-        Console.WriteLine(BitsRepresentation(ref number));
+        Console.WriteLine("\nСостояние памяти:\n" + RepresentToBase2(number) + "\n");
+        AwaitCommand();
     }
-    private static void ReadSector(long number, int sector)
+    private static void WriteNumber(ref long mainNumber, int number)
     {
-        int m = 15 << sector;
+        mainNumber <<= 4;
+        mainNumber |= number;
+    }
+    private static long ReadSector(long mainNumber, int sector)
+    {
+        long m = 0xF;
+        long result = (mainNumber >> 4 * sector) & m;
+        return result;
+    }
+    private static void ClearSector(ref long mainNumber, int sector)
+    {
+        long m, m1;
+        if (sector > 0)
+        {
+            m1 = 15 << (sector - 1) * 4;
+            m = (0xFFFFFFF0 << (sector * 4)) | m1;
+        }
+        else
+        {
+            m = 0xFFFFFFF0 << (sector * 4);
+        }
+        mainNumber &= m;
     }
     private static void AwaitCommand()
     {
-        Console.WriteLine("Введите команду:\n/write [число (1-15)] - занести\n/read [ячейка (1-16)] - прочитать\n/clear [ячейка (1-16)] - очистить");
+        Console.WriteLine("Введите команду:\n/write [число (1-15)] - занести\n/read [ячейка (0-15)] - прочитать\n/clear [ячейка (0-15)] - очистить");
         string input = Console.ReadLine();
         string[] words = input.Split(' ');
         if (words.Length == 2)
@@ -44,7 +82,7 @@ internal class Program
         Console.WriteLine("\nНеверная команда.");
         AwaitCommand();
     }
-    private static string BitsRepresentation(ref long number)
+    private static string RepresentToBase2(long number)
     {
         string binaryRepresentation = Convert.ToString(number, 2);
         string result = "";
@@ -56,6 +94,5 @@ internal class Program
     public static void Main(string[] args)
     {
         AwaitCommand();
-        // Console.WriteLine(BitsRepresentation(ref number));
     }
 }
