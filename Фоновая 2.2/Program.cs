@@ -14,7 +14,7 @@ class BitArrayHandler
                     if (ReadSector(number, 15) == 0)
                         WriteNumber(ref number, argument);
                     else
-                        PrintWithColor("\n[!] Ячейка занята.", ConsoleColor.White,ConsoleColor.Red);
+                        PrintWithColor("\n[!] Все ячейки заполнены.", ConsoleColor.White,ConsoleColor.Red);
                     PrintSelectedSector(RepresentToBase2(number), 0);
                 }
                 else
@@ -62,16 +62,8 @@ class BitArrayHandler
     
     private void ClearSector(ref long mainNumber, int sector)
     {
-        long m, m1;
-        if (sector > 0)
-        {
-            m1 = 15 << (sector - 1) * 4;
-            m = (0xFFFFFFF0 << (sector * 4)) | m1;
-        }
-        else
-        {
-            m = 0xFFFFFFF0 << (sector * 4);
-        }
+        long m;
+        m = ~(15 << sector * 4);
         mainNumber &= m;
     }
     
