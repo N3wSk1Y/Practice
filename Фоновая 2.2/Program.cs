@@ -1,10 +1,10 @@
 ﻿using System;
 namespace phone22;
 
-internal class Program
+class BitArrayHandler
 {
-    private static long number = 0;
-    private static void HandleCommand(string command, int argument)
+    private long number = 0;
+    private void HandleCommand(string command, int argument)
     {
         switch (command)
         {
@@ -47,20 +47,20 @@ internal class Program
         AwaitCommand();
     }
     
-    private static void WriteNumber(ref long mainNumber, int number)
+    private void WriteNumber(ref long mainNumber, int number)
     {
         mainNumber <<= 4;
         mainNumber |= number;
     }
     
-    private static long ReadSector(long mainNumber, int sector)
+    private long ReadSector(long mainNumber, int sector)
     {
         long m = 0xF;
         long result = (mainNumber >> 4 * sector) & m;
         return result;
     }
     
-    private static void ClearSector(ref long mainNumber, int sector)
+    private void ClearSector(ref long mainNumber, int sector)
     {
         long m, m1;
         if (sector > 0)
@@ -75,7 +75,7 @@ internal class Program
         mainNumber &= m;
     }
     
-    private static void AwaitCommand()
+    public void AwaitCommand()
     {
         Console.WriteLine("\nВведите команду:\n/write [число (1-15)] - занести\n/read [ячейка (0-15)] - прочитать\n/clear [ячейка (0-15)] - очистить");
         string input = Console.ReadLine();
@@ -93,7 +93,7 @@ internal class Program
         AwaitCommand();
     }
     
-    private static string RepresentToBase2(long number)
+    private string RepresentToBase2(long number)
     {
         string binaryRepresentation = Convert.ToString(number, 2);
         string result = "";
@@ -103,7 +103,7 @@ internal class Program
         return result += binaryRepresentation;
     }
     
-    private static void PrintSelectedSector(string number, int sector)
+    private void PrintSelectedSector(string number, int sector)
     {
         sector = 16 - sector;
         int lastIndex = sector * 4;
@@ -120,16 +120,20 @@ internal class Program
         Console.WriteLine();
     }
 
-    private static void PrintWithColor(string text, ConsoleColor textColor = ConsoleColor.White, ConsoleColor backColor = ConsoleColor.Black)
+    private void PrintWithColor(string text, ConsoleColor textColor = ConsoleColor.White, ConsoleColor backColor = ConsoleColor.Black)
     {
         Console.ForegroundColor = textColor;
         Console.BackgroundColor = backColor;
         Console.Write(text);
         Console.ResetColor();
     }
-    
+}
+
+internal class Program
+{
     public static void Main(string[] args)
     {
-        AwaitCommand();
+        var handler = new BitArrayHandler();
+        handler.AwaitCommand();
     }
 }
