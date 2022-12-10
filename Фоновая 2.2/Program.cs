@@ -11,47 +11,55 @@ internal class Program
             case "/write": // Занести
                 if (argument is >= 1 and <= 15)
                 {
-                    WriteNumber(ref number, argument);
+                    if (ReadSector(number, 15) == 0)
+                        WriteNumber(ref number, argument);
+                    else
+                        PrintWithColor("\n[!] Ячейка занята.", ConsoleColor.White,ConsoleColor.Red);
+                    PrintSelectedSector(RepresentToBase2(number), 0);
                 }
                 else
-                    Console.WriteLine("Число должно быть в диапазоне от 1 до 15");
+                    PrintWithColor("\n[!] Число должно быть в диапазоне от 1 до 15.", ConsoleColor.White,ConsoleColor.Red);
                 break;
             case "/read": // Прочитать
                 if (argument is >= 0 and <= 15)
                 {
-                    Console.WriteLine($"Число в ячейке {argument}: " + ReadSector(number, argument));
+                    PrintWithColor($"\nЧисло в ячейке {argument}: " + ReadSector(number, argument), ConsoleColor.White,ConsoleColor.Blue);
+                    PrintSelectedSector(RepresentToBase2(number), argument);
                 }
                 else
-                    Console.WriteLine("Ячейка должна быть в диапазоне от 0 до 15");
+                    PrintWithColor("\n[!] Ячейка должна быть в диапазоне от 0 до 15.", ConsoleColor.White,ConsoleColor.Red);
     
                 break;
             case "/clear": // Очистить
                 if (argument is >= 0 and <= 15)
                 {
                     ClearSector(ref number, argument);
-                    Console.WriteLine($"Ячейка {argument} очищена.");
+                    PrintWithColor($"\nЯчейка {argument} очищена.", ConsoleColor.White,ConsoleColor.Blue);
+                    PrintSelectedSector(RepresentToBase2(number), argument);
                 }
                 else
-                    Console.WriteLine("Ячейка должна быть в диапазоне от 0 до 15");
+                    PrintWithColor("\n[!] Ячейка должна быть в диапазоне от 0 до 15.", ConsoleColor.White,ConsoleColor.Red);
                 break;
             default:
-                Console.WriteLine("\nНеверная команда.");
+                PrintWithColor("[!] Неверная команда.", ConsoleColor.White,ConsoleColor.Red);
                 break;
         }
-        Console.WriteLine("\nСостояние памяти:\n" + RepresentToBase2(number) + "\n");
         AwaitCommand();
     }
+    
     private static void WriteNumber(ref long mainNumber, int number)
     {
         mainNumber <<= 4;
         mainNumber |= number;
     }
+    
     private static long ReadSector(long mainNumber, int sector)
     {
         long m = 0xF;
         long result = (mainNumber >> 4 * sector) & m;
         return result;
     }
+    
     private static void ClearSector(ref long mainNumber, int sector)
     {
         long m, m1;
@@ -66,11 +74,12 @@ internal class Program
         }
         mainNumber &= m;
     }
+    
     private static void AwaitCommand()
     {
-        Console.WriteLine("Введите команду:\n/write [число (1-15)] - занести\n/read [ячейка (0-15)] - прочитать\n/clear [ячейка (0-15)] - очистить");
+        Console.WriteLine("\nВведите команду:\n/write [число (1-15)] - занести\n/read [ячейка (0-15)] - прочитать\n/clear [ячейка (0-15)] - очистить");
         string input = Console.ReadLine();
-        string[] words = input.Split(' ');
+        string[] words = input.Trim().Split(' ');
         if (words.Length == 2)
         {
             if (Int32.TryParse(words[1], out int argument))
@@ -79,9 +88,11 @@ internal class Program
             }
             return;
         }
-        Console.WriteLine("\nНеверная команда.");
+
+        PrintWithColor("\n\n[!] Неверная команда.", ConsoleColor.White,ConsoleColor.Red);
         AwaitCommand();
     }
+    
     private static string RepresentToBase2(long number)
     {
         string binaryRepresentation = Convert.ToString(number, 2);
@@ -91,6 +102,32 @@ internal class Program
         
         return result += binaryRepresentation;
     }
+    
+    private static void PrintSelectedSector(string number, int sector)
+    {
+        sector = 16 - sector;
+        int lastIndex = sector * 4;
+        int firstIndex = lastIndex - 4;
+        Console.WriteLine("\nТекущее состояние памяти:");
+        for (int i = 0; i <= 63; i++)
+        {
+            if (i >= firstIndex && i < lastIndex)
+                PrintWithColor(number[i].ToString(), ConsoleColor.Green);
+            else
+                PrintWithColor(number[i].ToString(), ConsoleColor.Red);
+        }
+
+        Console.WriteLine();
+    }
+
+    private static void PrintWithColor(string text, ConsoleColor textColor = ConsoleColor.White, ConsoleColor backColor = ConsoleColor.Black)
+    {
+        Console.ForegroundColor = textColor;
+        Console.BackgroundColor = backColor;
+        Console.Write(text);
+        Console.ResetColor();
+    }
+    
     public static void Main(string[] args)
     {
         AwaitCommand();
