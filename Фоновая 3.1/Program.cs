@@ -25,7 +25,7 @@ internal class Program
 
     private static bool IsDividedBy7(int a)
     {
-        if (a.ToString().Length == 3)
+        if (a > 99 && a < 100)
         {
             int a3 = a % 10;
             int n = a / 10;
