@@ -33,6 +33,7 @@ internal class Program
     
     public static void Main(string[] args)
     {
+        Console.WriteLine(F(32));
         Console.WriteLine(F_35(1, 100000));
     }
 }
