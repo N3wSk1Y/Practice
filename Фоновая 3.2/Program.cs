@@ -13,9 +13,38 @@ internal class Program
             return 2 * F(n + 2) + F(n + 5);
     }
 
+    private static int FindRoutesAmount(int a, int b)
+    {
+        if (a == b)
+            return 1;
+        else if (a > b || a == 17 || a == 23)
+            return 0;
+        else
+            return FindRoutesAmount(a + 1, b) + FindRoutesAmount(a + 2, b);
+    }
+    
+    private static int NumberDigitsSum(int n, int sum = 0)
+    {
+        if (n > 0)
+            return NumberDigitsSum(n / 10, sum + n % 10);
+        else 
+            return sum;
+    }
+
     public static void Main(string[] args)
     {
-        int t1, t2, t3;
-        Console.WriteLine(F(5));
+        int t1, t2, t22, t3;
+        Console.WriteLine("Введите число для поиска количества натуральный чисел, для которых сумма чисел значения F(n) = 27.");
+        t1 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Количество таких чисел: {F(t1)}");
+
+        Console.WriteLine("Введите начальное и конечное число для поиска количества возможных програм исполнителя.");
+        t2 = int.Parse(Console.ReadLine());
+        t22 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Таких програм существует: {FindRoutesAmount(t2, t22)}");
+        
+        Console.WriteLine("Введите число для поиска суммы цифр.");
+        t3 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Сумма цифр числа: {NumberDigitsSum(t3)}");
     }
 }
