@@ -25,10 +25,10 @@ internal class Program
     
     private static int NumberDigitsSum(int n, int sum = 0)
     {
-        if (n > 0)
-            return NumberDigitsSum(n / 10, sum + n % 10);
-        else 
+        if (n <= 0)
             return sum;
+        else 
+            return NumberDigitsSum(n / 10, sum + n % 10);
     }
 
     public static void Main(string[] args)
