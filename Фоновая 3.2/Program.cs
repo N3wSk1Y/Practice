@@ -17,7 +17,7 @@ internal class Program
     {
         if (a == b)
             return 1;
-        else if (a > b || a == 17 || a == 23)
+        else if (a > b)
             return 0;
         else
             return FindRoutesAmount(a + 1, b) + FindRoutesAmount(a + 2, b);
@@ -33,15 +33,20 @@ internal class Program
 
     public static void Main(string[] args)
     {
-        int t1, t2, t22, t3;
+        int t1, start1, start2, t3, point1, point2;
         Console.WriteLine("Введите число для поиска количества натуральный чисел, для которых сумма чисел значения F(n) = 27.");
         t1 = int.Parse(Console.ReadLine());
         Console.WriteLine($"Количество таких чисел: {F(t1)}");
 
         Console.WriteLine("Введите начальное и конечное число для поиска количества возможных програм исполнителя.");
-        t2 = int.Parse(Console.ReadLine());
-        t22 = int.Parse(Console.ReadLine());
-        Console.WriteLine($"Таких програм существует: {FindRoutesAmount(t2, t22)}");
+        start1 = int.Parse(Console.ReadLine());
+        start2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Введите числа для проверки прохождения прохождения через них.");
+        point1 = int.Parse(Console.ReadLine());
+        point2 = int.Parse(Console.ReadLine());
+        int ways = FindRoutesAmount(start1, start2);
+        int noPointsWays = FindRoutesAmount(start1, point1 - 1) * FindRoutesAmount(point1 + 1, point2 - 1) * FindRoutesAmount(point1 + 1, point2);
+        Console.WriteLine($"Таких програм существует: {ways - noPointsWays}");
         
         Console.WriteLine("Введите число для поиска суммы цифр.");
         t3 = int.Parse(Console.ReadLine());
