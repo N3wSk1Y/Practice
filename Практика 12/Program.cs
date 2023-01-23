@@ -168,5 +168,6 @@ internal class Program
             }
                 
         }
+        Main();
     }
 }
