@@ -43,8 +43,7 @@ internal class Program
         foreach (var xm in array)
         {
             string binaryCase = Convert.ToString(xm, 2);
-            string quinaryCase = Convert.ToString(xm, 5);
-            if (binaryCase.EndsWith("01") && quinaryCase.EndsWith("3"))
+            if (binaryCase.EndsWith("01") && xm % 5 == 3)
             {
                 amount++;
                 min = xm < min ? xm : min;
@@ -79,7 +78,7 @@ internal class Program
             if (xm % 7 == 0 && number.Contains("0") && number.Contains("2") && number.Contains("5"))
             {
                 amount++;
-                max = xm > max ? xm : max;
+                max = xm < max ? xm : max;
             }
         }
     }
@@ -104,7 +103,7 @@ internal class Program
     private static int GetDividersAmount(int a)
     {
         int result = 0;
-        for (int i = 2; i < a; i++)
+        for (int i = 1; i <= a; i++)
         {
             if (a % i == 0)
             {
