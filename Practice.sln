@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Практика 12", "Пр
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 4.1", "Фоновая 4.1\Фоновая 4.1.csproj", "{D8B4F9CC-8BE7-4502-895C-293E128AD883}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classwork", "Classwork\Classwork.csproj", "{5324A64E-A3D0-4627-BE8F-015D1E15FD37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,5 +146,9 @@ Global
 		{D8B4F9CC-8BE7-4502-895C-293E128AD883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8B4F9CC-8BE7-4502-895C-293E128AD883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8B4F9CC-8BE7-4502-895C-293E128AD883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5324A64E-A3D0-4627-BE8F-015D1E15FD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5324A64E-A3D0-4627-BE8F-015D1E15FD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5324A64E-A3D0-4627-BE8F-015D1E15FD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5324A64E-A3D0-4627-BE8F-015D1E15FD37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

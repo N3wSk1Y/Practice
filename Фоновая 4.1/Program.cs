@@ -109,8 +109,9 @@ class Program
             }
             case 3:
             {
-                Console.WriteLine("Введите второй массив: ");
-                int[] array2 = InputIntArray(arrayLength);
+                Console.WriteLine("Введите длину второго массива: ");
+                int arrayLength2 = Convert.ToInt32(Console.ReadLine());
+                int[] array2 = InputIntArray(arrayLength2);
                 Console.WriteLine("Пересечение массивов: ");
                 PrintArrayCrosses(array, array2);
                 break;
