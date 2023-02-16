@@ -3,6 +3,50 @@ namespace phone41;
 
 class Program
 {
+    private static bool ArrayContains(int[] array, int value)
+    {
+        foreach (var xm in array)
+        {
+            if (xm == value)
+                return true;
+        }
+
+        return false;
+    }
+
+    private static int IndexOf(int[] array, int value)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == value)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+    
+    private static int LastIndexOf(int[] array, int value)
+    {
+        for (int i = array.Length - 1; i >= 0; i--)
+        {
+            if (array[i] == value)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    private static void SwapArrayElements(int[] array, int firstIndex, int secondIndex)
+    {
+        int temp = array[secondIndex];
+        array[secondIndex] = array[firstIndex];
+        array[firstIndex] = temp;
+    }
+    
     private static int[] InputIntArray(int arrayLength)
     {
         int[] array = new int[arrayLength];
@@ -19,7 +63,10 @@ class Program
     {
         foreach (int xm in array)
         {
-            Console.Write(xm);
+            if (xm != 0)
+            {
+                Console.Write(xm);
+            }
         }
     }
 
@@ -43,10 +90,19 @@ class Program
 
     private static int[] SliceByMaxAndMin(int[] array)
     {
-        int indexOfMax = Array.IndexOf(array, FindMax(array));
-        int indexOfMin = Array.LastIndexOf(array, FindMin(array));
+        int indexOfMax = IndexOf(array, FindMax(array));
+        int indexOfMin = LastIndexOf(array, FindMin(array));
+
+        // return array.Where((value, index) => index >= Math.Min(indexOfMin, indexOfMax) && index <= Math.Max(indexOfMin, indexOfMax)).ToArray();
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (!(i >= Math.Min(indexOfMin, indexOfMax) && i <= Math.Max(indexOfMin, indexOfMax)))
+            {
+                array[i] = 0;
+            }
+        }
         
-        return array.Where((value, index) => index >= Math.Min(indexOfMin, indexOfMax) && index <= Math.Max(indexOfMin, indexOfMax)).ToArray();
+        return array;
     }
 
     private static int[] ArrayShiftLeft(int[] array, int k)
@@ -56,14 +112,31 @@ class Program
             array[i] = i + k < array.Length ? array[i + k] : 0;
         }
 
-        return array.Where((value) => value != 0).ToArray();
+        // return array.Where((value) => value != 0).ToArray();
+        // for (int i = 0; i + 1 < array.Length; i++)
+        // {
+        //     if (array[i] == 0)
+        //     {
+        //         SwapArrayElements(ref array, i, i+1);
+        //     }
+        // }
+        //
+        // int firstZero = LastIndexOf(array, 0);
+        // int[] result = new int[firstZero + 1];
+        // for (int i = 0; i < result.Length; i++)
+        // {
+        //     result[i] = array[i];
+        // }
+        //
+        // return result;
+        return array;
     }
 
     private static void PrintArrayCrosses(int[] array1, int[] array2)
     {
         foreach (var xm in array2)
         {
-            if (array1.Contains(xm))
+            if (ArrayContains(array1, xm))
             {
                 Console.Write(xm);
             }
@@ -80,7 +153,8 @@ class Program
             }
         }
 
-        return array.Where((value) => value != 0).ToArray();
+        // return array.Where((value) => value != 0).ToArray();
+        return array;
     }
 
     private static void SelectTask(int taskNumber)
