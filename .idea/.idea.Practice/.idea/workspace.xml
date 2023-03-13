@@ -35,13 +35,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practice.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Фоновая 3.3/Фоновая 3.3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 3.3/Фоновая 3.3.csproj" afterDir="false" />
+    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="Timetable class">
+      <change afterPath="$PROJECT_DIR$/Фоновая 4.3/Timetable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Фоновая 4.3/WeekDay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Фоновая 4.3/timetable.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Фоновая 4.3/Lesson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 4.3/Lesson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Фоновая 4.3/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 4.3/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Фоновая 4.3/Фоновая 4.3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 4.3/Фоновая 4.3.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +57,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/17e38fc279b3572621a1a0737741283fe2bdc3149cd2f3b3fd79191674166ecd/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e3d8d2969c4d2f47fdb5382b19d0279bb07c63645c867e8c79f11f575b7ba9/Math.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3d5314c4b5f391de6f26e7ce0d430d6d2aa1d7a44530b874fdbb1a4a97374/File.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/70f617fc68cf47c4af27e06f2b56f801b1c8a8/_dd720/DayOfWeek.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/73f56d1a66857521c1d12532c3e20e3c77856721cee1cdf10c1b647d786c1a/Int64.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/81e7aa86b91d4d3699a5e7635e9216ce8cbacefba85c12a3e3ecdf7fb75f0/ParseNumbers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b42dbe862dd51fb5e77e5fe0ab92bfe2f4e9d579a34b2110f5a774eaaf7ec/Number.Parsing.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c95dcc58313213285a3bb76c2a3cedab84d293d1b4f5693c7b33d0f2648e5/Convert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Exercise1/Exercise1/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,11 +79,12 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2Efs1WvVdtcPnF2bb87tfA3Ryvl" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
   </component>
   <component name="ProjectViewState">
@@ -678,7 +684,7 @@
       <workItem from="1675020957211" duration="64000" />
       <workItem from="1678032113104" duration="61000" />
       <workItem from="1678698114695" duration="29000" />
-      <workItem from="1678698493765" duration="3077000" />
+      <workItem from="1678698493765" duration="11439000" />
     </task>
     <task id="LOCAL-00001" summary="Exercise1">
       <created>1663001016467</created>
@@ -799,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670710835523</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Timetable class">
+      <created>1678701612695</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678701612695</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -833,6 +846,7 @@
     <MESSAGE value="Practice 7.2" />
     <MESSAGE value="Фоновая 2" />
     <MESSAGE value="Фоновая 2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Фоновая 2.2" />
+    <MESSAGE value="Timetable class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Timetable class" />
   </component>
 </project>
