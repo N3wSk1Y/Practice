@@ -2,12 +2,12 @@ namespace phone43;
 
 public struct Lesson
 {
-    public Classroom Classroom;
-    public Teacher Teacher;
-    public Group Group;
-    public Subject Subject;
-    public DateTime DateStart;
+    public int Classroom;
+    public string Teacher;
+    public string Group;
+    public string Subject;
     public DayOfWeek WeekDay;
-    private int lessonTime;
+    public DateTime StartTime;
+    public DateTime EndTime;
     public int LessonOrderNumber;
 }

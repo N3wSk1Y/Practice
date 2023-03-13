@@ -1,0 +1,103 @@
+Index: .idea/.idea.Practice/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.Practice/.idea/vcs.xml b/.idea/.idea.Practice/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/.idea.Practice/.idea/vcs.xml	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
++++ /dev/null	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.idea.Practice/.idea/encodings.xml
+===================================================================
+diff --git a/.idea/.idea.Practice/.idea/encodings.xml b/.idea/.idea.Practice/.idea/encodings.xml
+deleted file mode 100644
+--- a/.idea/.idea.Practice/.idea/encodings.xml	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
++++ /dev/null	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
+@@ -1,4 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise" />
+-</project>
+\ No newline at end of file
+Index: .idea/.idea.Practice/.idea/indexLayout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.Practice/.idea/indexLayout.xml b/.idea/.idea.Practice/.idea/indexLayout.xml
+deleted file mode 100644
+--- a/.idea/.idea.Practice/.idea/indexLayout.xml	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
++++ /dev/null	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="UserContentModel">
+-    <attachedFolders />
+-    <explicitIncludes />
+-    <explicitExcludes />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.idea.Practice/.idea/.gitignore
+===================================================================
+diff --git a/.idea/.idea.Practice/.idea/.gitignore b/.idea/.idea.Practice/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.idea.Practice/.idea/.gitignore	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
++++ /dev/null	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
+@@ -1,13 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Rider ignored files
+-/modules.xml
+-/.idea.Practice.iml
+-/contentModel.xml
+-/projectSettingsUpdater.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: Фоновая 3.3/Фоновая 3.3.csproj
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><Project Sdk=\"Microsoft.NET.Sdk\">\r\n\r\n    <PropertyGroup>\r\n        <OutputType>Exe</OutputType>\r\n        <TargetFramework>net7.0</TargetFramework>\r\n        <RootNamespace>Фоновая_3._3</RootNamespace>\r\n        <ImplicitUsings>enable</ImplicitUsings>\r\n        <Nullable>enable</Nullable>\r\n    </PropertyGroup>\r\n\r\n</Project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Фоновая 3.3/Фоновая 3.3.csproj b/Фоновая 3.3/Фоновая 3.3.csproj
+--- a/Фоновая 3.3/Фоновая 3.3.csproj	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
++++ b/Фоновая 3.3/Фоновая 3.3.csproj	(date 1678698528241)
+@@ -5,7 +5,6 @@
+         <TargetFramework>net7.0</TargetFramework>
+         <RootNamespace>Фоновая_3._3</RootNamespace>
+         <ImplicitUsings>enable</ImplicitUsings>
+-        <Nullable>enable</Nullable>
+     </PropertyGroup>
+ 
+ </Project>
+Index: Practice.sln.DotSettings.user
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><wpf:ResourceDictionary xml:space=\"preserve\" xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\" xmlns:s=\"clr-namespace:System;assembly=mscorlib\" xmlns:ss=\"urn:shemas-jetbrains-com:settings-storage-xaml\" xmlns:wpf=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\">\r\n\t<s:String x:Key=\"/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue\">WARNING</s:String>\r\n\t<s:String x:Key=\"/Default/CodeInspection/PencilsConfiguration/FiltersState/=CodeStyle/@EntryIndexedValue\">Off</s:String>\r\n\t<s:String x:Key=\"/Default/CodeInspection/PencilsConfiguration/FiltersState/=NamingFilter/@EntryIndexedValue\">Off</s:String>\r\n\t<s:String x:Key=\"/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue\">Off</s:String>\r\n\t</wpf:ResourceDictionary>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Practice.sln.DotSettings.user b/Practice.sln.DotSettings.user
+--- a/Practice.sln.DotSettings.user	(revision 7fc64310e79877e57a1529e80df64670bc6ff3ec)
++++ b/Practice.sln.DotSettings.user	(date 1678032135519)
+@@ -3,4 +3,5 @@
+ 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=CodeStyle/@EntryIndexedValue">Off</s:String>
+ 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=NamingFilter/@EntryIndexedValue">Off</s:String>
+ 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue">Off</s:String>
++	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\JetBrains\JetBrains Rider 2022.1.1\tools\MSBuild\Current\Bin\MSBuild.exe</s:String>
+ 	</wpf:ResourceDictionary>
+\ No newline at end of file
