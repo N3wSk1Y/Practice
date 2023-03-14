@@ -7,7 +7,6 @@ public struct Lesson
     public int ClassNumber;
     public int GroupNumber;
     public string Subject;
-    public WeekDay WeekDay;
     public DateTime StartTime;
     public DateTime EndTime;
     public int OrderNumber;
