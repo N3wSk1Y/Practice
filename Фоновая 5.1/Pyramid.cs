@@ -7,18 +7,12 @@ public class Pyramid
 
     public double Perimeter
     {
-        get
-        {
-            return this.basement * 4;
-        }
+        get { return this.basement * 4; }
     }
 
     public double Volume
     {
-        get
-        {
-            return (this.basement * this.basement * this.height) / 3;
-        }
+        get { return (this.basement * this.basement * this.height) / 3; }
     }
 
     public Pyramid(double basement, double height)

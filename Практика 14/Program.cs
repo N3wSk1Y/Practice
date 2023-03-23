@@ -35,11 +35,11 @@ class Program
             0,
             20
         );
-        point.MovePoint(Axis.X, 50);
-        point.MovePoint(Axis.Y, 15);
+        point.X += 50;
+        point.Y += 15;
 
-        double radiusVectorLength1 = point1.GetRadiusVectorLength();
-        double radiusVectorLength2 = point.GetRadiusVectorLength();
+        double radiusVectorLength1 = point1.RadiusVector;
+        double radiusVectorLength2 = point.RadiusVector;
         
         Console.WriteLine($"Длина радиус-вектора 1й точки - {radiusVectorLength1}, 2й точки - {radiusVectorLength2}");
         point.CombinePoints(point1).PrintCoordinates();

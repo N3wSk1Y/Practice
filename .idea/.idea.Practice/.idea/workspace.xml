@@ -42,15 +42,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Фоновая 5.1/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Фоновая 5.1/Фоновая 5.1.csproj" afterDir="false" />
+    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="Фоновая 5.1 (1 часть)">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/shelf/Uncommitted_changes_before_Update_at_13_03_2023_12_10_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/shelf/Uncommitted_changes_before_Update_at_13_03_2023_12_10__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practice.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Практика 14/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Практика 14/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Практика 14/Point3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Практика 14/Point3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -859,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678701612695</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Фоновая 5.1 (1 часть)">
+      <created>1679394899937</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1679394899937</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -894,6 +898,7 @@
     <MESSAGE value="Фоновая 2" />
     <MESSAGE value="Фоновая 2.2" />
     <MESSAGE value="Timetable class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Timetable class" />
+    <MESSAGE value="Фоновая 5.1 (1 часть)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фоновая 5.1 (1 часть)" />
   </component>
 </project>

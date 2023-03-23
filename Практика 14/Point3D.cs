@@ -13,6 +13,47 @@ public class Point3D
     private double y;
     private double z;
 
+    public double RadiusVector {
+        get { return this.x * this.x + this.y * this.y + this.z * this.z; }
+    }
+
+    public double X {
+        get { return this.x; } 
+        set 
+        {
+            if (value >= 0) 
+                this.x = value;
+            
+        }
+    }
+
+    public double Y {
+        get { return this.y; } 
+        set 
+        {
+            if (value < 100 && value >= 0)
+                this.y = value;
+            else
+                this.y = 100;
+        }
+    }
+
+    public double Z {
+        get { return this.z; } 
+        set 
+        {
+            if (value <= this.x + this.y)
+                this.z = value;
+            else
+                Console.WriteLine($"Число не соответствует условиям.");
+        }
+    }
+
+    public bool CrossArea {
+        get { return (y <= x) && (y >= 2) && (x <= 10); }
+    }
+
+    
     public Point3D()
     {
         this.x = 0;
@@ -26,31 +67,22 @@ public class Point3D
         this.y = y;
         this.z = z;
     }
-
-    public void MovePoint(Axis axis, double value)
-    {
-        switch (axis)
-        {
-            case Axis.X:
-                this.x += value;
-                break;
-            case Axis.Y:
-                this.y += value;
-                break;
-            case Axis.Z:
-                this.z += value;
-                break;
-        }
+    
+    public Point3D (decimal xy) {
+        this.x = Convert.ToInt32(xy);
+        xy = xy % 1;
+        
+        while (xy % 1 != 0)
+            xy *= 10;
+        
+        this.y = Convert.ToInt32(xy);
+        this.z = 0;
     }
+
 
     public void PrintCoordinates()
     {
         Console.WriteLine($"X: {this.x}, Y: {this.y}, Z: {this.z}");
-    }
-
-    public double GetRadiusVectorLength()
-    {
-        return Math.Sqrt(x * x + y * y + z * z);
     }
 
     public Point3D CombinePoints(Point3D point2)
@@ -61,4 +93,17 @@ public class Point3D
             this.z + point2.z
         );
     }
+    
+    public void AddToPoint (Point3D point) {
+        point.X += this.X;
+        point.Y += this.Y;
+        point.Z += this.Z;
+    }
+
+    public void AddToPoint (int step) {
+        this.X += step;
+        this.Y += step;
+        this.Z += step;
+    }
+
 }
