@@ -6,7 +6,7 @@ class Program
 {
     public static void Main()
     {
-        Console.WriteLine("Создать точку со значениями по умолчанию - R\nУказать значения вручную - E");
+        Console.WriteLine("Создать точку со значениями по умолчанию - R\nУказать значения вручную - E\nУказать decimal в качестве x, y - T");
         ConsoleKeyInfo button;
         Point3D point;
         do
@@ -29,19 +29,26 @@ class Program
                 point = new Point3D();
                 break;
             }
+            if (button.Key == ConsoleKey.T)
+            {
+                Console.WriteLine("Введите число с фиксированной точкой: ");
+                point = new Point3D(Convert.ToDecimal(Console.ReadLine()));
+                break;
+            }
         } while (true);
         Point3D point1 = new Point3D(
             50,
             0,
             20
         );
-        point.X += 50;
-        point.Y += 15;
+        // point.X += 50;
+        // point.Y += 15;
 
         double radiusVectorLength1 = point1.RadiusVector;
         double radiusVectorLength2 = point.RadiusVector;
         
+        // point.AddPoints(5);
         Console.WriteLine($"Длина радиус-вектора 1й точки - {radiusVectorLength1}, 2й точки - {radiusVectorLength2}");
-        point.CombinePoints(point1).PrintCoordinates();
+        point.PrintCoordinates();
     }
 }
