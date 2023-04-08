@@ -42,10 +42,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="Practice 14">
+    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Практика 14/Point3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Практика 14/Point3D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Практика 14/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Практика 14/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Фоновая 5.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 5.1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +64,16 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/474036909e78720f86fa8bbb1343094e24a131b82a10c371576eddb819cfc7/ParseNumbers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5d46f35cc10c0f21348d324d6965a48709c61fa67dfdcfa0254ce8cdbbb8/DateTime.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/65de3cb4e57e393446b1db7cb1aa8afac6b41dc6f1ca65f67244791497301/Exception.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/828b9b954ad541becef9da7ed9858df2427469f55156736328a8f57bfe3b2342/Convert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/97ff884ce3c0b8d07093729bcf815db710327f8e4c233c5282d34b45a118fa9a/Contains.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aad252b0a04509969f5da31ea594847e36b88a1868cc356f6d3ff15a0a8c8/TextReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b58c429ff9a5e14c8666fb427fd27a626abe8a73359d970f7db9e9a74e4a41/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d0618a718ed0ad3f0f8921b156bf7b7927978f4562d08448b98783697c0/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ecdfa86eabbda4d23a0b68297d68e84c1adddb9ca2fda577ba181437343730/Where.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f51b60a5531b49d297c28a768cd7503d38a00/_d35af/ConsoleColor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Практика 1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/n3wsk1y/RiderProjects/Practice/Практика 14/Point3D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/n3wsk1y/RiderProjects/Practice/Практика 14/Point3D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Практика 8/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Практика 9/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,7 +123,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.Практика 14">
+  <component name="RunManager" selected=".NET Project.Фоновая 5.1">
     <configuration name="Практика 1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Практика 1/bin/Debug/net6.0/Практика 1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -869,7 +874,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679557985061</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactoring">
+      <created>1679737251517</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1679737251517</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -898,7 +910,6 @@
     <MESSAGE value="Practice 4" />
     <MESSAGE value="Practice 5" />
     <MESSAGE value="UValue returning" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Practice 6" />
     <MESSAGE value="Practice 7.2" />
     <MESSAGE value="Фоновая 2" />
@@ -906,6 +917,7 @@
     <MESSAGE value="Timetable class" />
     <MESSAGE value="Фоновая 5.1 (1 часть)" />
     <MESSAGE value="Practice 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Practice 14" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>

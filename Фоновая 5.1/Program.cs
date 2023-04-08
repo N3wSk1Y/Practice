@@ -18,18 +18,18 @@ public class Program
                 Console.Write("Введите высоту трапеции: ");
                 double height = Convert.ToDouble(Console.ReadLine());
 
-                pyramid = new Pyramid(basement, height);
+                pyramid = Pyramid.Create(basement, height);
                 break;
             }
             if (button.Key == ConsoleKey.R)
             {
-                pyramid = new Pyramid();
+                pyramid = Pyramid.Create();
                 break;
             }
         } while (true);
 
         double perimeter = pyramid.Perimeter;
         double volume = pyramid.Volume;
-        Console.WriteLine($"Периметр: {perimeter}, объем: {volume}");
+        Console.WriteLine($"Периметр: {perimeter}, объем: {volume}, сечение: {pyramid.GoldenRatio}");
     }
 }

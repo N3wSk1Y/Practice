@@ -13,21 +13,21 @@ public class Point3D
     private double y;
     private double z;
 
-    public Point3D()
+    private Point3D()
     {
         this.X = 0;
         this.Y = 0;
         this.Z = 0;
     }
     
-    public Point3D(double x, double y, double z)
+    private Point3D(double x, double y, double z)
     {
         this.X = x;
         this.Y = y;
         this.Z = z;
     }
     
-    public Point3D (decimal xy) {
+    private Point3D (decimal xy) {
         this.X = Convert.ToInt32(xy);
         xy = xy % 1;
         
@@ -44,10 +44,12 @@ public class Point3D
 
     public double X {
         get { return this.x; } 
-        set 
+        set
         {
-            if (value >= 0) 
+            if (value >= 0)
                 this.x = value;
+            else
+                throw new Exception("Значение X не может быть отрицательным.");
         }
     }
 
@@ -55,7 +57,7 @@ public class Point3D
         get { return this.y; } 
         set 
         {
-            if (value < 100 && value >= 0)
+            if (value is >= 0 and < 100)
                 this.y = value;
             else
                 this.y = 100;
@@ -69,7 +71,7 @@ public class Point3D
             if (value <= this.x + this.y)
                 this.z = value;
             else
-                Console.WriteLine($"Число не соответствует условиям.");
+                throw new Exception("Значение Z не удовлетворяет условиям.");
         }
     }
 
@@ -112,4 +114,37 @@ public class Point3D
         this.Z += step;
     }
 
+    public void MoveBy (int x, int y) {
+        this.X = x;
+        this.Y = y;
+    }
+
+    public static Point3D CreateObject()
+    {
+        return new Point3D();
+    }
+    
+    public static Point3D CreateObject(double x, double y, double z)
+    {
+        if (x >= 0 && (x % 5 == 0 || y % 5 == 0 || z % 5 == 0) && y is >= 0 and <= 100 && z < x + y)
+        {
+            return new Point3D(x, y, z);
+        }
+        else
+        {
+            throw new Exception("Значения координат не соответствуют условиям.");
+        }
+    }
+
+    public static Point3D CreateObject(decimal xy)
+    {
+        if ((int)xy != xy)
+        {
+            return new Point3D(xy);
+        }
+        else
+        {
+            throw new Exception("Значение decimal не соответствует условиям.");
+        }
+    }
 }
