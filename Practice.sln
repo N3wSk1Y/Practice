@@ -58,6 +58,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Практика 14", "Пр
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 5.1", "Фоновая 5.1\Фоновая 5.1.csproj", "{5F9268B6-B77B-44C5-97F4-932842BA475F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 5.2", "Фоновая 5.2\Фоновая 5.2.csproj", "{EC72856B-3878-4862-BD95-222A9E8D8961}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -180,5 +182,9 @@ Global
 		{5F9268B6-B77B-44C5-97F4-932842BA475F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F9268B6-B77B-44C5-97F4-932842BA475F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F9268B6-B77B-44C5-97F4-932842BA475F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC72856B-3878-4862-BD95-222A9E8D8961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC72856B-3878-4862-BD95-222A9E8D8961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC72856B-3878-4862-BD95-222A9E8D8961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC72856B-3878-4862-BD95-222A9E8D8961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -13,7 +13,7 @@ public class Point3D
     private double y;
     private double z;
 
-    private Point3D()
+    public Point3D()
     {
         this.X = 0;
         this.Y = 0;

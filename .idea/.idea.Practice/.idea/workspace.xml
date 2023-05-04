@@ -36,18 +36,24 @@
     <projectFile>Фоновая 4.1/Фоновая 4.1.csproj</projectFile>
     <projectFile>Фоновая 4.3/Фоновая 4.3.csproj</projectFile>
     <projectFile>Фоновая 5.1/Фоновая 5.1.csproj</projectFile>
+    <projectFile>Фоновая 5.2/Фоновая 5.2.csproj</projectFile>
     <projectFile>Шарики/Шарики.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="Refactoring">
+    <list default="true" id="2181b9a4-ee46-4fd2-8e39-050ce9c828ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Фоновая 5.2/MatrixWeather.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Фоновая 5.2/Month.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Фоновая 5.2/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Фоновая 5.2/Week.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Фоновая 5.2/Фоновая 5.2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2023,_09_19_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2023__09_19__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Practice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Practice.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Практика 14/Point3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Практика 14/Point3D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Практика 14/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Практика 14/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Фоновая 5.1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 5.1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Фоновая 5.1/Pyramid.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +79,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ecdfa86eabbda4d23a0b68297d68e84c1adddb9ca2fda577ba181437343730/Where.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f51b60a5531b49d297c28a768cd7503d38a00/_d35af/ConsoleColor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Практика 1/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/n3wsk1y/RiderProjects/Practice/Практика 14/Point3D.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/n3wsk1y/RiderProjects/Practice/Практика 14/Point3D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Практика 8/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Практика 9/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Фоновая 2.2/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -82,14 +86,13 @@
     <setting file="file://$PROJECT_DIR$/Фоновая 3.1/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Фоновая 3.2/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Фоновая 3.3/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/n3wsk1y/RiderProjects/Practice/Фоновая 4.3/Lesson.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Efs1WvVdtcPnF2bb87tfA3Ryvl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -117,13 +120,13 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Dmitry\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Dmitry\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Dmitry\\AppData\\Local\\Symbols\\src"
+      "/Users/n3wsk1y/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/Users/n3wsk1y/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
+      "/Users/n3wsk1y/.local/share/Symbols/src"
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.Фоновая 5.1">
+  <component name="RunManager" selected=".NET Project.Фоновая 5.2">
     <configuration name="Практика 1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Практика 1/bin/Debug/net6.0/Практика 1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -539,9 +542,9 @@
       </method>
     </configuration>
     <configuration name="Фоновая 5.1" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Фоновая 5.1/bin/Debug/net7.0/Фоновая 5.1" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Фоновая 5.1/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -551,7 +554,25 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net7.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Фоновая 5.2" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Фоновая 5.2/bin/Debug/net7.0/Фоновая 5.2" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Фоновая 5.2/bin/Debug/net7.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Фоновая 5.2/Фоновая 5.2.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net7.0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -665,6 +686,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue=".NET Project.Фоновая 5.2" />
       <item itemvalue=".NET Project.Практика 14" />
       <item itemvalue=".NET Project.Фоновая 5.1" />
       <item itemvalue=".NET Project.Практика 12" />
@@ -733,6 +755,7 @@
       <workItem from="1678032113104" duration="61000" />
       <workItem from="1678698114695" duration="29000" />
       <workItem from="1678698493765" duration="11439000" />
+      <workItem from="1682322540696" duration="11423000" />
     </task>
     <task id="LOCAL-00001" summary="Exercise1">
       <created>1663001016467</created>
@@ -881,7 +904,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679737251517</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Point3D">
+      <created>1680935113540</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680935113540</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -918,6 +948,7 @@
     <MESSAGE value="Фоновая 5.1 (1 часть)" />
     <MESSAGE value="Practice 14" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Point3D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Point3D" />
   </component>
 </project>
