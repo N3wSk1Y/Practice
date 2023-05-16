@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice12;
 
 internal class Program
@@ -50,7 +51,7 @@ internal class Program
             }
         }
     }
-    
+
     private static void Task3(int[] array, out int amount, out int max)
     {
         amount = 0;
@@ -67,7 +68,7 @@ internal class Program
             }
         }
     }
-    
+
     private static void Task4(int[] array, out int amount, out int max)
     {
         amount = 0;
@@ -82,7 +83,7 @@ internal class Program
             }
         }
     }
-    
+
     private static void Task5(int[] array, out int amount, out int average)
     {
         amount = 0;
@@ -113,7 +114,7 @@ internal class Program
 
         return result;
     }
-    
+
     public static void Main()
     {
         Console.Write("Введите первое число для генерации промежутка: ");
@@ -121,51 +122,65 @@ internal class Program
         Console.Write("Введите второе число для генерации промежутка: ");
         int b = Convert.ToInt32(Console.ReadLine());
         int[] array = GenerateIntRange(a, b);
-        
+
         Console.Write("Введите номер задачи: ");
         int taskNumber = Convert.ToInt32(Console.ReadLine());
         switch (taskNumber)
         {
             case 1:
             {
-                int amount, min;
+                int amount,
+                    min;
                 Task1(array, out amount, out min);
-                Console.WriteLine($"Длина отсортированного массива: {amount}\nМинимальное число: {min}");
-                break;  
+                Console.WriteLine(
+                    $"Длина отсортированного массива: {amount}\nМинимальное число: {min}"
+                );
+                break;
             }
 
             case 2:
             {
-                int amount, min;
+                int amount,
+                    min;
                 Task2(array, out amount, out min);
-                Console.WriteLine($"Длина отсортированного массива: {amount}\nМинимальное число: {min}");
+                Console.WriteLine(
+                    $"Длина отсортированного массива: {amount}\nМинимальное число: {min}"
+                );
                 break;
             }
-            
+
             case 3:
             {
-                int amount, max;
+                int amount,
+                    max;
                 Task3(array, out amount, out max);
-                Console.WriteLine($"Длина отсортированного массива: {amount}\nМаксимальное число: {max}");
+                Console.WriteLine(
+                    $"Длина отсортированного массива: {amount}\nМаксимальное число: {max}"
+                );
                 break;
             }
-            
+
             case 4:
             {
-                int amount, min;
+                int amount,
+                    min;
                 Task4(array, out amount, out min);
-                Console.WriteLine($"Длина отсортированного массива: {amount}\nМинимальное число: {min}");
+                Console.WriteLine(
+                    $"Длина отсортированного массива: {amount}\nМинимальное число: {min}"
+                );
                 break;
             }
-            
+
             case 5:
             {
-                int amount, average;
+                int amount,
+                    average;
                 Task5(array, out amount, out average);
-                Console.WriteLine($"Длина отсортированного массива: {amount}\nСреднее арифметическое: {average}");
+                Console.WriteLine(
+                    $"Длина отсортированного массива: {amount}\nСреднее арифметическое: {average}"
+                );
                 break;
             }
-                
         }
         Main();
     }

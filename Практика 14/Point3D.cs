@@ -13,37 +13,94 @@ public class Point3D
     private double y;
     private double z;
 
+    public static Point3D operator +(Point3D point1, Point3D point2) =>
+        new Point3D(point1.x + point2.x, point1.y + point2.y, point1.z + point2.z);
+
+    public static Point3D operator -(Point3D point1, Point3D point2) =>
+        new Point3D(point1.x - point2.x, point1.y - point2.y, point1.z - point2.z);
+
+    public static Point3D operator ++(Point3D point3D) =>
+        new Point3D(point3D.x++, point3D.y++, point3D.z++);
+
+    public static Point3D operator --(Point3D point3D) =>
+        new Point3D(point3D.x--, point3D.y--, point3D.z--);
+
+    public static bool operator <=(Point3D point1, Point3D point2)
+    {
+        return point1.x <= point2.x && point1.y <= point2.y && point1.z <= point2.z;
+    }
+
+    public static bool operator >=(Point3D point1, Point3D point2)
+    {
+        return point1.x >= point2.x && point1.y >= point2.y && point1.z >= point2.z;
+    }
+
+    public static bool operator true(Point3D point3D)
+    {
+        return point3D.z > 0 && point3D.y < 0 && point3D.x > 0;
+    }
+
+    public static bool operator false(Point3D point3D)
+    {
+        return !(point3D.z > 0 && point3D.y < 0 && point3D.x > 0);
+    }
+
+    public static Point3D operator &(Point3D point1, Point3D point2) =>
+        new Point3D(
+            (int)point1.x & (int)point2.x,
+            (int)point1.y & (int)point1.y,
+            (int)point1.z & (int)point2.z
+        );
+
+    public static Point3D operator |(Point3D point1, Point3D point2) =>
+        new Point3D(
+            (int)point1.x | (int)point2.x,
+            (int)point1.y | (int)point1.y,
+            (int)point1.z | (int)point2.z
+        );
+
+    public static Point3D operator >>(Point3D point1, Point3D point2) =>
+        new Point3D(
+            (int)point1.x >> (int)point2.x,
+            (int)point1.y >> (int)point1.y,
+            (int)point1.z >> (int)point2.z
+        );
+
     public Point3D()
     {
+        this.X = 0;
         this.X = 0;
         this.Y = 0;
         this.Z = 0;
     }
-    
+
     private Point3D(double x, double y, double z)
     {
         this.X = x;
         this.Y = y;
         this.Z = z;
     }
-    
-    private Point3D (decimal xy) {
+
+    private Point3D(decimal xy)
+    {
         this.X = Convert.ToInt32(xy);
         xy = xy % 1;
-        
+
         while (xy % 1 != 0)
             xy *= 10;
-        
+
         this.Y = Convert.ToInt32(xy);
         this.Z = 0;
     }
-    
-    public double RadiusVector {
+
+    public double RadiusVector
+    {
         get { return Math.Sqrt(this.X * this.X + this.Y * this.Y + this.Z * this.Z); }
     }
 
-    public double X {
-        get { return this.x; } 
+    public double X
+    {
+        get { return this.x; }
         set
         {
             if (value >= 0)
@@ -53,9 +110,10 @@ public class Point3D
         }
     }
 
-    public double Y {
-        get { return this.y; } 
-        set 
+    public double Y
+    {
+        get { return this.y; }
+        set
         {
             if (value is >= 0 and < 100)
                 this.y = value;
@@ -64,9 +122,10 @@ public class Point3D
         }
     }
 
-    public double Z {
-        get { return this.z; } 
-        set 
+    public double Z
+    {
+        get { return this.z; }
+        set
         {
             if (value <= this.x + this.y)
                 this.z = value;
@@ -75,7 +134,8 @@ public class Point3D
         }
     }
 
-    public bool CrossArea {
+    public bool CrossArea
+    {
         get { return (y <= x) && (y >= 2) && (x <= 10); }
     }
 
@@ -86,13 +146,9 @@ public class Point3D
 
     public Point3D CombinePoints(Point3D point2)
     {
-        return new Point3D(
-            this.X + point2.X,
-            this.Y + point2.Y,
-            this.Z + point2.Z
-        );
+        return new Point3D(this.X + point2.X, this.Y + point2.Y, this.Z + point2.Z);
     }
-    
+
     public Point3D CombinePoints(Point3D point2, double step)
     {
         return new Point3D(
@@ -101,20 +157,23 @@ public class Point3D
             this.Z + point2.Z + step
         );
     }
-    
-    public void AddPoints (Point3D point) {
+
+    public void AddPoints(Point3D point)
+    {
         point.X += this.X;
         point.Y += this.Y;
         point.Z += this.Z;
     }
 
-    public void AddPoints (double step) {
+    public void AddPoints(double step)
+    {
         this.X += step;
         this.Y += step;
         this.Z += step;
     }
 
-    public void MoveBy (int x, int y) {
+    public void MoveBy(int x, int y)
+    {
         this.X = x;
         this.Y = y;
     }
@@ -123,7 +182,7 @@ public class Point3D
     {
         return new Point3D();
     }
-    
+
     public static Point3D CreateObject(double x, double y, double z)
     {
         if (x >= 0 && (x % 5 == 0 || y % 5 == 0 || z % 5 == 0) && y is >= 0 and <= 100 && z < x + y)

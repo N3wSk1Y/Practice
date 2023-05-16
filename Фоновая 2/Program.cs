@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace phone2;
 
 internal class Program
@@ -16,11 +17,11 @@ internal class Program
 
         return amount;
     }
-    
+
     private static string ConvertToBits(int x)
     {
         int m;
-        bool firstOne = false; 
+        bool firstOne = false;
         string result = "";
         for (int i = 31; i >= 0; i--)
         {
@@ -41,12 +42,13 @@ internal class Program
 
     private static int CyclicRightShift(int x1, int n)
     {
-        return ( x1 << n ) | ( x1 >> (0x20 - n) );
+        return (x1 << n) | (x1 >> (0x20 - n));
     }
-    
+
     public static void Main(string[] args)
     {
-        uint n = 3, x1 = 5;
+        uint n = 3,
+            x1 = 5;
         int x2 = 5;
         Console.WriteLine("Введите числа n, x1, x2 через Enter.");
         n = Convert.ToUInt32(Console.ReadLine());
@@ -55,11 +57,15 @@ internal class Program
 
         int nullBitsAmount = FindNullBitsAmount(x1);
         Console.WriteLine($"Число {x1} имеет {nullBitsAmount} нулей двоичной системе.");
-        
+
         string convertedNumber = ConvertToBits(x2);
-        Console.WriteLine($"Число {x2} имеет представление {convertedNumber} в двоичной системе без ведущих нулей.");
-        
+        Console.WriteLine(
+            $"Число {x2} имеет представление {convertedNumber} в двоичной системе без ведущих нулей."
+        );
+
         int shiftedNumber = CyclicRightShift((int)x1, (int)n);
-        Console.WriteLine($"Число {x1} при цикличном сдвиге вправо на {n} имеет представление {shiftedNumber} в двоичной системе.");
+        Console.WriteLine(
+            $"Число {x1} при цикличном сдвиге вправо на {n} имеет представление {shiftedNumber} в двоичной системе."
+        );
     }
 }

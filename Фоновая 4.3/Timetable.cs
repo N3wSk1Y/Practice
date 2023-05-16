@@ -7,7 +7,7 @@ public struct ClassTable
 {
     [Range(1, 11, ErrorMessage = "Школьный класс может быть в диапазоне от 1 до 11")]
     public int ClassNumber;
-    
+
     [Range(1, 6, ErrorMessage = "Номер группы может быть в диапазоне от 1 до 6")]
     public int GroupNumber;
     public Lesson[] Lessons;
@@ -72,7 +72,7 @@ public class TimeTable
         {
             Console.WriteLine($"\nЗаполнение данных класса ({i + 1}/{this.LocalDatabase.Length}).");
             this.LocalDatabase[i] = new ClassTable();
-            
+
             Console.Write("Введите номер класса [1-11]: ");
             this.LocalDatabase[i].ClassNumber = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите номер группы [1-6]: ");
@@ -82,7 +82,8 @@ public class TimeTable
 
             for (int j = 0; j < this.LocalDatabase[i].Lessons.Length; j++)
             {
-                string classAndGroupTag = $"{this.LocalDatabase[i].ClassNumber}.{this.LocalDatabase[i].GroupNumber}";
+                string classAndGroupTag =
+                    $"{this.LocalDatabase[i].ClassNumber}.{this.LocalDatabase[i].GroupNumber}";
                 Console.WriteLine($"Есть-ли у группы {classAndGroupTag} {j + 1}-й урок [Y|N]:");
                 ConsoleKeyInfo button;
                 do
@@ -93,16 +94,16 @@ public class TimeTable
                         Lesson lesson = new Lesson();
                         Console.Write("\nВведите название предмета: ");
                         lesson.Subject = Console.ReadLine();
-                        
+
                         Console.Write("Введите имя преподавателя: ");
                         lesson.Teacher = Console.ReadLine();
-                        
+
                         Console.Write("Введите номер аудитории: ");
                         lesson.Classroom = Convert.ToInt32(Console.ReadLine());
-                        
+
                         Console.Write("Введите время начала урока: ");
                         lesson.StartTime = Convert.ToDateTime(Console.ReadLine());
-                        
+
                         lesson.EndTime = lesson.StartTime.AddMinutes(45);
                         lesson.OrderNumber = i + 1;
                         this.LocalDatabase[i].Lessons[j] = lesson;
@@ -111,7 +112,6 @@ public class TimeTable
 
                     if (button.Key == ConsoleKey.N)
                         break;
-                        
                 } while (true);
             }
         }
@@ -134,7 +134,7 @@ public class TimeTable
     //                     Lesson localLesson = this.LocalDatabase[i].Lessons[k];
     //                     if (localLesson.OrderNumber == lesson.OrderNumber)
     //                     {
-    //                         
+    //
     //                     }
     //                 }
     //             }
@@ -151,15 +151,19 @@ public class TimeTable
 
             for (int i = 0; i < this.LocalDatabase.Length; i++)
             {
-                Console.WriteLine($"| Класс {this.LocalDatabase[i].ClassNumber}.{this.LocalDatabase[i].GroupNumber} |");
+                Console.WriteLine(
+                    $"| Класс {this.LocalDatabase[i].ClassNumber}.{this.LocalDatabase[i].GroupNumber} |"
+                );
                 for (int j = 0; j < this.LocalDatabase[i].Lessons.Length; j++)
                 {
                     if (this.LocalDatabase[i].Lessons[j].Teacher != null)
                     {
                         Lesson lesson = this.LocalDatabase[i].Lessons[j];
                         Console.WriteLine(
-                        $"{j + 1}) {lesson.Subject} ({lesson.StartTime.ToShortTimeString()} - {lesson.EndTime.ToShortTimeString()}) | {lesson.Classroom}");
-                    } else 
+                            $"{j + 1}) {lesson.Subject} ({lesson.StartTime.ToShortTimeString()} - {lesson.EndTime.ToShortTimeString()}) | {lesson.Classroom}"
+                        );
+                    }
+                    else
                         Console.WriteLine($"{j + 1}) ОКНО В РАСПИСПИСАНИИ");
                 }
                 Console.WriteLine();

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice10;
 
 internal class Program
@@ -24,7 +25,7 @@ internal class Program
 
         return counter;
     }
-    
+
     public static void Main(string[] args)
     {
         Console.WriteLine(F(32));

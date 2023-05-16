@@ -1,11 +1,13 @@
 ﻿using System;
+
 namespace phone33;
 
 internal class Program
 {
     private static int FindPoint(string s)
     {
-        string localS, substring; 
+        string localS,
+            substring;
         bool isLocalS = true;
         for (int j = 1; j <= s.Length; j++)
         {
@@ -20,7 +22,7 @@ internal class Program
                 localS = s.Substring(i * j, j);
                 if (localS != substring)
                 {
-                    isLocalS = false; 
+                    isLocalS = false;
                     break;
                 }
             }
@@ -32,7 +34,6 @@ internal class Program
         }
         return 0;
     }
-
 
     public static void Main()
     {

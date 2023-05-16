@@ -1,15 +1,18 @@
 ﻿using System.IO;
+
 namespace stringpractice1;
 
 internal class Program
 {
     private static int Task1(string path)
     {
-        int maxNumber = 0, localMax = 0;
+        int maxNumber = 0,
+            localMax = 0;
         var fs = new StreamReader(path);
         string s = fs.ReadLine();
         char[] symbols = s.ToCharArray();
-        char prepreviousSymbol = 'A', previousSymbol = 'A';
+        char prepreviousSymbol = 'A',
+            previousSymbol = 'A';
         for (int i = 0; i < symbols.Length; i++)
         {
             if (prepreviousSymbol != symbols[i] && prepreviousSymbol != 'Z' && symbols[i] != 'Z')
@@ -28,14 +31,16 @@ internal class Program
 
         return maxNumber;
     }
-    
+
     private static int Task2(string path)
     {
-        int maxNumber = 0, localMax = 0;
+        int maxNumber = 0,
+            localMax = 0;
         var fs = new StreamReader(path);
         string s = fs.ReadLine();
         char[] symbols = s.ToCharArray();
-        char prepreviousSymbol = 'A', previousSymbol = 'A';
+        char prepreviousSymbol = 'A',
+            previousSymbol = 'A';
         for (int i = 0; i < symbols.Length; i++)
         {
             if (prepreviousSymbol != symbols[i] && prepreviousSymbol != 'Z' && symbols[i] != 'Z')
@@ -54,7 +59,7 @@ internal class Program
 
         return maxNumber;
     }
-    
+
     public static void Main()
     {
         // Вариант 2

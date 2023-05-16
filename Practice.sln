@@ -60,6 +60,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 5.1", "Фо�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Фоновая 5.2", "Фоновая 5.2\Фоновая 5.2.csproj", "{EC72856B-3878-4862-BD95-222A9E8D8961}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Дуэль", "Дуэль\Дуэль.csproj", "{E66B2290-A80B-4ED0-B3D9-B501F5B75671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -186,5 +188,9 @@ Global
 		{EC72856B-3878-4862-BD95-222A9E8D8961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC72856B-3878-4862-BD95-222A9E8D8961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC72856B-3878-4862-BD95-222A9E8D8961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66B2290-A80B-4ED0-B3D9-B501F5B75671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66B2290-A80B-4ED0-B3D9-B501F5B75671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66B2290-A80B-4ED0-B3D9-B501F5B75671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66B2290-A80B-4ED0-B3D9-B501F5B75671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

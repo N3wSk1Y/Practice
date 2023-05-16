@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice8;
 
 internal class Program
@@ -23,7 +24,7 @@ internal class Program
         }
         return counter;
     }
-    
+
     private static int Task2(int a)
     {
         a = Math.Abs(a);
@@ -46,7 +47,10 @@ internal class Program
         a = Math.Abs(a);
         if (a < 10)
             return false;
-        int counter = 0, sum1 = 0, sum2 = 0, aa = a;
+        int counter = 0,
+            sum1 = 0,
+            sum2 = 0,
+            aa = a;
         while (a > 0)
         {
             a /= 10;
@@ -62,7 +66,8 @@ internal class Program
                 sum1 += aa % 10;
                 sum2 += aa % 10;
             }
-            else sum2 += aa % 10;
+            else
+                sum2 += aa % 10;
             aa /= 10;
         }
 
@@ -79,14 +84,15 @@ internal class Program
                 if (m % i == 0)
                     sum += i + m / i;
             }
-            if (sum == m) 
+            if (sum == m)
                 Console.WriteLine(m);
         }
     }
 
     private static int Task5(int a)
     {
-        int result = 0, number;
+        int result = 0,
+            number;
         bool positive = true;
         while (a > 0)
         {
@@ -121,7 +127,7 @@ internal class Program
         int result = int.Parse(zeroReminder.Substring(2));
         return result;
     }
-    
+
     public static void Main(string[] args)
     {
         // Console.WriteLine($"Остаток от деления: {Remainder(17, 5)}");

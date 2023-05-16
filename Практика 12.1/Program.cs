@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice121;
 
 class Program
@@ -13,7 +14,7 @@ class Program
             }
         }
     }
-    
+
     private static int GetColumnsAmount(int[][] array)
     {
         int result = 0;
@@ -24,10 +25,10 @@ class Program
                 result = array[i].Length;
             }
         }
-        
+
         return result;
     }
-    
+
     private static int GetRowsAmount(int[][] array)
     {
         int result = 0;
@@ -47,22 +48,21 @@ class Program
                 }
             }
         }
-        
+
         return result;
     }
 
-    
     private static int[][] InputJaggetArray(int length)
     {
         int[][] array = new int[length][];
         for (int i = 0; i < length; i++)
         {
-            Console.WriteLine($"Введите длину {i+1}-й строки");
+            Console.WriteLine($"Введите длину {i + 1}-й строки");
             int length2 = Convert.ToInt32(Console.ReadLine());
             int[] insideArray = new int[length2];
             for (int j = 0; j < length2; j++)
             {
-                Console.WriteLine($"Введите {j+1} значение строки");
+                Console.WriteLine($"Введите {j + 1} значение строки");
                 insideArray[j] = Convert.ToInt32(Console.ReadLine());
             }
 
@@ -99,11 +99,11 @@ class Program
                     {
                         result[j] = array[i][j];
                         break;
-                    }   
+                    }
                 }
             }
         }
-        
+
         return result;
     }
 
@@ -129,20 +129,20 @@ class Program
                 currentIndex++;
             }
         }
-        
+
         array = result;
     }
-    
+
     private static void ShiftArray(ref int[][] array, int shiftStep)
     {
-        int result = array[shiftStep][array[shiftStep].Length-1];
-        for (int j = array[shiftStep].Length-1; j > 0; j--)
+        int result = array[shiftStep][array[shiftStep].Length - 1];
+        for (int j = array[shiftStep].Length - 1; j > 0; j--)
         {
-            array[shiftStep][j] = array[shiftStep][j-1];
+            array[shiftStep][j] = array[shiftStep][j - 1];
         }
         array[shiftStep][0] = result;
     }
-    
+
     public static void Main()
     {
         Console.Write("Введите количество строк в массиве:");

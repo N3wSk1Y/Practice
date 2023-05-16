@@ -18,13 +18,13 @@ internal class Program
                 max1 = input;
             }
             else if (input > max2)
-                    if (input != max1)
-                        max2 = input;
+                if (input != max1)
+                    max2 = input;
         }
 
         return max2;
     }
-    
+
     public static void Main(string[] args)
     {
         int max2 = FindSecondMax(5);

@@ -1,4 +1,5 @@
 using System;
+
 namespace practice32;
 
 public static class Program
@@ -24,10 +25,10 @@ public static class Program
     {
         string input = Console.ReadLine();
         int number = int.Parse(input);
-        string result = (number+10) / 10 == 1 ? "Yes" : "No";
+        string result = (number + 10) / 10 == 1 ? "Yes" : "No";
         return result;
     }
-    
+
     private static void Task3()
     {
         string[] parameters = Console.ReadLine().Replace(" ", "").Split(',');
@@ -54,7 +55,7 @@ public static class Program
         {
             Console.Write("не имеет действительных корней.");
         }
-        
+
         Console.ReadKey();
     }
 
@@ -67,6 +68,7 @@ public static class Program
         string r = (a - b) * (a - c) * (b - c) == 0 ? "Yes" : "No";
         return r;
     }
+
     private static string Task5()
     {
         char sybmol = char.Parse(Console.ReadLine().ToLower());
@@ -76,12 +78,18 @@ public static class Program
 
         switch (sybmol)
         {
-            case 'a': return "Гласная";
-            case 'e': return "Гласная";
-            case 'i': return "Гласная";
-            case 'o': return "Гласная";
-            case 'u': return "Гласная";
-            default: return "Согласная";
+            case 'a':
+                return "Гласная";
+            case 'e':
+                return "Гласная";
+            case 'i':
+                return "Гласная";
+            case 'o':
+                return "Гласная";
+            case 'u':
+                return "Гласная";
+            default:
+                return "Согласная";
         }
     }
 }

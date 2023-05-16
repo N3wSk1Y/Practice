@@ -14,7 +14,7 @@ public class Program
             {
                 Console.Write("Введите основание трапеции: ");
                 double basement = Convert.ToDouble(Console.ReadLine());
-        
+
                 Console.Write("Введите высоту трапеции: ");
                 double height = Convert.ToDouble(Console.ReadLine());
 
@@ -30,6 +30,8 @@ public class Program
 
         double perimeter = pyramid.Perimeter;
         double volume = pyramid.Volume;
-        Console.WriteLine($"Периметр: {perimeter}, объем: {volume}, сечение: {pyramid.GoldenRatio}");
+        Console.WriteLine(
+            $"Периметр: {perimeter}, объем: {volume}, сечение: {pyramid.GoldenRatio}"
+        );
     }
 }

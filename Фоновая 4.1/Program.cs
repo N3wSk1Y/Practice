@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace phone41;
 
 class Program
@@ -26,7 +27,7 @@ class Program
 
         return -1;
     }
-    
+
     private static int LastIndexOf(int[] array, int value)
     {
         for (int i = array.Length - 1; i >= 0; i--)
@@ -46,7 +47,7 @@ class Program
         array[secondIndex] = array[firstIndex];
         array[firstIndex] = temp;
     }
-    
+
     private static int[] InputIntArray(int arrayLength)
     {
         int[] array = new int[arrayLength];
@@ -58,7 +59,7 @@ class Program
 
         return array;
     }
-    
+
     private static void PrintArray(int[] array)
     {
         foreach (int xm in array)
@@ -75,16 +76,16 @@ class Program
         int max = array[0];
         foreach (var xm in array)
             max = xm > max ? xm : max;
-        
+
         return max;
     }
-    
+
     private static int FindMin(int[] array)
     {
         int min = array[0];
         foreach (var xm in array)
             min = xm < min ? xm : min;
-        
+
         return min;
     }
 
@@ -101,7 +102,7 @@ class Program
                 array[i] = 0;
             }
         }
-        
+
         return array;
     }
 
@@ -168,9 +169,11 @@ class Program
             case 1:
             {
                 int[] result = SliceByMaxAndMin(array);
-                Console.WriteLine("Элементы между первым максимальным и последним минимальными элементами: ");
+                Console.WriteLine(
+                    "Элементы между первым максимальным и последним минимальными элементами: "
+                );
                 PrintArray(result);
-                break; 
+                break;
             }
             case 2:
             {
@@ -192,22 +195,24 @@ class Program
             }
             case 4:
             {
-                int [] result = RemoveDublicatesFromArray(array);
+                int[] result = RemoveDublicatesFromArray(array);
                 Console.WriteLine("Массив без повторяющихся элементов: ");
                 PrintArray(result);
                 break;
             }
         }
     }
-    
+
     public static void Main()
     {
         while (true)
         {
-            Console.WriteLine("\n1 - Поиск элементов между первым максимальным и последним минимальными элементами\n" +
-                              "2 - Циклический сдвиг массива\n" +
-                              "3 - Пересечение массивов\n" +
-                              "4 - Удаление идущих подряд элементов");
+            Console.WriteLine(
+                "\n1 - Поиск элементов между первым максимальным и последним минимальными элементами\n"
+                    + "2 - Циклический сдвиг массива\n"
+                    + "3 - Пересечение массивов\n"
+                    + "4 - Удаление идущих подряд элементов"
+            );
             Console.Write("Введите номер функции: ");
             int taskNumber = Convert.ToInt32(Console.ReadLine());
             if (taskNumber is >= 1 and <= 4)

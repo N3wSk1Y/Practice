@@ -8,7 +8,8 @@ public class Pyramid
     public double Height
     {
         get { return this.height; }
-        set {
+        set
+        {
             if (value > 0)
             {
                 this.height = value;
@@ -19,11 +20,12 @@ public class Pyramid
             }
         }
     }
-    
+
     public double Basement
     {
         get { return this.basement; }
-        set {
+        set
+        {
             if (value > 0)
             {
                 this.basement = value;
@@ -34,7 +36,7 @@ public class Pyramid
             }
         }
     }
-    
+
     public double Perimeter
     {
         get { return this.basement * 4; }
@@ -49,7 +51,8 @@ public class Pyramid
     {
         get
         {
-            return Math.Round(this.height) / Math.Round(this.basement) == 1.6 || Math.Round(this.basement) / Math.Round(this.height) == 1.6;
+            return Math.Round(this.height) / Math.Round(this.basement) == 1.6
+                || Math.Round(this.basement) / Math.Round(this.height) == 1.6;
         }
     }
 

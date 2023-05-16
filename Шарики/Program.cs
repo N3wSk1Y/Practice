@@ -29,7 +29,7 @@
             Random random = new Random();
             int k,
                 l;
-            for (int i = 0; i < ballsAmount;)
+            for (int i = 0; i < ballsAmount; )
             {
                 k = random.Next(9);
                 l = random.Next(9);
@@ -138,7 +138,10 @@
                     case ConsoleKey.A:
                         if (fieldPointX > 0)
                         {
-                            if ((firstPointX == -1 && firstPointY == -1) || field[fieldPointY, fieldPointX - 1] == 0)
+                            if (
+                                (firstPointX == -1 && firstPointY == -1)
+                                || field[fieldPointY, fieldPointX - 1] == 0
+                            )
                             {
                                 fieldPointX--;
                             }
@@ -148,7 +151,10 @@
                     case ConsoleKey.W:
                         if (fieldPointY > 0)
                         {
-                            if ((firstPointX == -1 && firstPointY == -1) || field[fieldPointY - 1, fieldPointX] == 0)
+                            if (
+                                (firstPointX == -1 && firstPointY == -1)
+                                || field[fieldPointY - 1, fieldPointX] == 0
+                            )
                             {
                                 fieldPointY--;
                             }
@@ -158,7 +164,10 @@
                     case ConsoleKey.D:
                         if (fieldPointX < 8)
                         {
-                            if ((firstPointX == -1 && firstPointY == -1) || field[fieldPointY, fieldPointX + 1] == 0)
+                            if (
+                                (firstPointX == -1 && firstPointY == -1)
+                                || field[fieldPointY, fieldPointX + 1] == 0
+                            )
                             {
                                 fieldPointX++;
                             }
@@ -168,7 +177,10 @@
                     case ConsoleKey.S:
                         if (fieldPointY < 8)
                         {
-                            if ((firstPointX == -1 && firstPointY == -1) || field[fieldPointY + 1, fieldPointX] == 0)
+                            if (
+                                (firstPointX == -1 && firstPointY == -1)
+                                || field[fieldPointY + 1, fieldPointX] == 0
+                            )
                             {
                                 fieldPointY++;
                             }
@@ -188,9 +200,16 @@
                         }
                         break;
                     case ConsoleKey.E:
-                        if ((fieldPointX != firstPointX || fieldPointY != firstPointY) && firstPointY != -1 && firstPointX != -1)
+                        if (
+                            (fieldPointX != firstPointX || fieldPointY != firstPointY)
+                            && firstPointY != -1
+                            && firstPointX != -1
+                        )
                         {
-                            if ((secondPointY == fieldPointY && secondPointX == fieldPointX) || field[fieldPointY, fieldPointX] != 0)
+                            if (
+                                (secondPointY == fieldPointY && secondPointX == fieldPointX)
+                                || field[fieldPointY, fieldPointX] != 0
+                            )
                             {
                                 secondPointY = -2;
                                 secondPointX = -2;
@@ -201,7 +220,12 @@
                                 secondPointX = fieldPointX;
                             }
                         }
-                        if (firstPointX != -1 && firstPointY != -1 && secondPointX != -2 && secondPointY != -2)
+                        if (
+                            firstPointX != -1
+                            && firstPointY != -1
+                            && secondPointX != -2
+                            && secondPointY != -2
+                        )
                         {
                             temp = field[firstPointY, firstPointX];
                             field[firstPointY, firstPointX] = 0;
@@ -270,7 +294,7 @@
                             flag = true;
                         }
                     }
-                    
+
                     if (
                         j < 7
                         && field[i, j] == field[i, j + 1]
@@ -309,7 +333,7 @@
                             flag = true;
                         }
                     }
-                    
+
                     if (
                         j < 7
                         && i < 7
@@ -394,14 +418,50 @@
             if (
                 secondPointX != -2
                 && (
-                    (secondPointY < 8 && field[secondPointY, secondPointX] == field[secondPointY + 1, secondPointX])
-                    || (secondPointY < 8 && secondPointX < 8 && field[secondPointY, secondPointX] == field[secondPointY + 1, secondPointX + 1])
-                    || (secondPointX < 8 && field[secondPointY, secondPointX] == field[secondPointY, secondPointX + 1])
-                    || (secondPointY > 0 && secondPointX < 8 && field[secondPointY, secondPointX] == field[secondPointY - 1, secondPointX + 1])
-                    || (secondPointY > 0 && field[secondPointY, secondPointX] == field[secondPointY - 1, secondPointX])
-                    || (secondPointY > 0 && secondPointX > 0 && field[secondPointY, secondPointX] == field[secondPointY - 1, secondPointX - 1])
-                    || (secondPointX > 0 && field[secondPointY, secondPointX] == field[secondPointY, secondPointX - 1])
-                    || (secondPointY < 8 && secondPointX > 0 && field[secondPointY, secondPointX] == field[secondPointY + 1, secondPointX - 1])
+                    (
+                        secondPointY < 8
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY + 1, secondPointX]
+                    )
+                    || (
+                        secondPointY < 8
+                        && secondPointX < 8
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY + 1, secondPointX + 1]
+                    )
+                    || (
+                        secondPointX < 8
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY, secondPointX + 1]
+                    )
+                    || (
+                        secondPointY > 0
+                        && secondPointX < 8
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY - 1, secondPointX + 1]
+                    )
+                    || (
+                        secondPointY > 0
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY - 1, secondPointX]
+                    )
+                    || (
+                        secondPointY > 0
+                        && secondPointX > 0
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY - 1, secondPointX - 1]
+                    )
+                    || (
+                        secondPointX > 0
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY, secondPointX - 1]
+                    )
+                    || (
+                        secondPointY < 8
+                        && secondPointX > 0
+                        && field[secondPointY, secondPointX]
+                            == field[secondPointY + 1, secondPointX - 1]
+                    )
                 )
             )
             {

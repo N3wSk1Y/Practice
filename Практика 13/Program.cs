@@ -26,19 +26,20 @@ namespace practice13
             Октябрь = 10,
             Ноябрь = 11,
             Декабрь = 12
-        }        
+        }
+
         static void Main()
         {
             int[] daysInMonth = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             for (Month i = Month.Январь; i <= Month.Декабрь; i++)
                 Console.WriteLine($"Месяц {i} cоответсвует числу {(int)i}");
 
-            Console.Write("Введите номер месяца: "); 
+            Console.Write("Введите номер месяца: ");
             int monthNumber = int.Parse(Console.ReadLine());
-            
-            Console.Write("Введите номер дня: "); 
+
+            Console.Write("Введите номер дня: ");
             int dayNumber = int.Parse(Console.ReadLine());
-            
+
             Console.Write("Введите сколько отсчитать дней ");
             int addDays = int.Parse(Console.ReadLine());
 

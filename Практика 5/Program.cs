@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice5;
 
 internal class Program

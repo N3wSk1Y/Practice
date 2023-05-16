@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice2;
 
 public static class Program

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice1;
 
 public static class Program
@@ -15,15 +16,15 @@ public static class Program
         int s1 = 4;
         int p = 16;
         string s = "AMD";
-        
+
         Console.WriteLine("Введите ваше имя");
         name = Console.ReadLine();
         Console.WriteLine("Введите дробное число");
         f = double.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
-        
+
         Console.WriteLine($"\nПривет, {name}");
         Console.WriteLine("*********************************");
-        Console.WriteLine("*\tЯ твой компьютер!\t*");        
+        Console.WriteLine("*\tЯ твой компьютер!\t*");
         Console.WriteLine("*********************************");
         Console.WriteLine("У меня следующие характеристики:\n");
         Console.WriteLine($"Процессор\t\t{s} с разрядностью {f1:F2}GHz");

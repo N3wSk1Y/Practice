@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace phone31;
 
 internal class Program
@@ -63,21 +64,27 @@ internal class Program
                 a--;
         }
     }
-        
+
     public static void Main(string[] args)
     {
-        int t1, t2, t3;
+        int t1,
+            t2,
+            t3;
         Console.WriteLine("Введите число для поиска ближайшего простого");
         t1 = int.Parse(Console.ReadLine());
         ReplaceWithNearestPrimeNumber(ref t1);
         Console.WriteLine($"Ближайшее простое число: {t1}");
-        
-        Console.WriteLine("Введите количество чисел в последовательности для поиска полных квадратов");
+
+        Console.WriteLine(
+            "Введите количество чисел в последовательности для поиска полных квадратов"
+        );
         t2 = int.Parse(Console.ReadLine());
         ReplaceWithFullSquares(ref t2);
         Console.WriteLine($"В последовательности {t2} полных квадратов");
-        
-        Console.WriteLine("Введите количество чисел в последовательности для поиска трехзначных кратных семи");
+
+        Console.WriteLine(
+            "Введите количество чисел в последовательности для поиска трехзначных кратных семи"
+        );
         t3 = int.Parse(Console.ReadLine());
         ReplaceWithNumbersMultipesOf7(ref t3);
         Console.WriteLine($"В последовательности {t3} трезначных чисел кратных семи");

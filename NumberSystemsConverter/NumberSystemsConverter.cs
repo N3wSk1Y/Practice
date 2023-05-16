@@ -2,8 +2,5 @@
 
 public static class NumberSystemsConverter
 {
-    public static string ToBinary(byte number)
-    {
-        
-    }
+    public static string ToBinary(byte number) { }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice11;
 
 internal class Program // Вариант 5
@@ -21,7 +22,7 @@ internal class Program // Вариант 5
             s = s.Replace(subs, "");
         }
     }
-        
+
     private static void Task3(ref string s)
     {
         if (s.Length % 2 == 0)
@@ -38,7 +39,7 @@ internal class Program // Вариант 5
     {
         string s1 = "12345678";
         Console.WriteLine(Task1(s1, 2));
-        
+
         string s2 = "abc123abc121233";
         Task2(ref s2, "123");
         Console.WriteLine(s2);

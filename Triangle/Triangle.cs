@@ -1,6 +1,3 @@
 ﻿namespace Triangle;
 
-public class Triangle
-{
-    
-}
+public class Triangle { }

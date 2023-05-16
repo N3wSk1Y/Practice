@@ -1,9 +1,11 @@
 ﻿using System;
+
 namespace phone22;
 
 class BitArrayHandler
 {
     private long number = 0;
+
     private void HandleCommand(string command, int argument)
     {
         switch (command)
@@ -14,62 +16,88 @@ class BitArrayHandler
                     if (ReadSector(number, 15) == 0)
                         WriteNumber(ref number, argument);
                     else
-                        PrintWithColor("\n[!] Все ячейки заполнены.", ConsoleColor.White,ConsoleColor.Red);
+                        PrintWithColor(
+                            "\n[!] Все ячейки заполнены.",
+                            ConsoleColor.White,
+                            ConsoleColor.Red
+                        );
                     PrintSelectedSector(RepresentToBase2(number), 0);
                 }
                 else
-                    PrintWithColor("\n[!] Число должно быть в диапазоне от 1 до 15.", ConsoleColor.White,ConsoleColor.Red);
+                    PrintWithColor(
+                        "\n[!] Число должно быть в диапазоне от 1 до 15.",
+                        ConsoleColor.White,
+                        ConsoleColor.Red
+                    );
                 break;
             case "/read": // Прочитать
                 if (argument is >= 0 and <= 15)
                 {
-                    PrintWithColor($"\nЧисло в ячейке {argument}: " + ReadSector(number, argument), ConsoleColor.White,ConsoleColor.Blue);
+                    PrintWithColor(
+                        $"\nЧисло в ячейке {argument}: " + ReadSector(number, argument),
+                        ConsoleColor.White,
+                        ConsoleColor.Blue
+                    );
                     PrintSelectedSector(RepresentToBase2(number), argument);
                 }
                 else
-                    PrintWithColor("\n[!] Ячейка должна быть в диапазоне от 0 до 15.", ConsoleColor.White,ConsoleColor.Red);
-    
+                    PrintWithColor(
+                        "\n[!] Ячейка должна быть в диапазоне от 0 до 15.",
+                        ConsoleColor.White,
+                        ConsoleColor.Red
+                    );
+
                 break;
             case "/clear": // Очистить
                 if (argument is >= 0 and <= 15)
                 {
                     ClearSector(ref number, argument);
-                    PrintWithColor($"\nЯчейка {argument} очищена.", ConsoleColor.White,ConsoleColor.Blue);
+                    PrintWithColor(
+                        $"\nЯчейка {argument} очищена.",
+                        ConsoleColor.White,
+                        ConsoleColor.Blue
+                    );
                     PrintSelectedSector(RepresentToBase2(number), argument);
                 }
                 else
-                    PrintWithColor("\n[!] Ячейка должна быть в диапазоне от 0 до 15.", ConsoleColor.White,ConsoleColor.Red);
+                    PrintWithColor(
+                        "\n[!] Ячейка должна быть в диапазоне от 0 до 15.",
+                        ConsoleColor.White,
+                        ConsoleColor.Red
+                    );
                 break;
             default:
-                PrintWithColor("[!] Неверная команда.", ConsoleColor.White,ConsoleColor.Red);
+                PrintWithColor("[!] Неверная команда.", ConsoleColor.White, ConsoleColor.Red);
                 break;
         }
         AwaitCommand();
     }
-    
+
     private void WriteNumber(ref long mainNumber, int number)
     {
         mainNumber <<= 4;
         mainNumber |= number;
     }
-    
+
     private long ReadSector(long mainNumber, int sector)
     {
         long m = 0xF;
         long result = (mainNumber >> 4 * sector) & m;
         return result;
     }
-    
+
     private void ClearSector(ref long mainNumber, int sector)
     {
         long m;
         m = ~(15 << sector * 4);
         mainNumber &= m;
     }
-    
+
     public void AwaitCommand()
     {
-        Console.WriteLine("\nВведите команду:\n/write [число (1-15)] - занести\n/read [ячейка (0-15)] - прочитать\n/clear [ячейка (0-15)] - очистить");
+        Console.WriteLine(
+            "\nВведите команду:\n/write [число (1-15)] - занести\n/read [ячейка (0-15)] - прочитать\n/clear [ячейка (0-15)] - очистить"
+        );
         string input = Console.ReadLine();
         string[] words = input.Trim().Split(' ');
         if (words.Length == 2)
@@ -81,20 +109,20 @@ class BitArrayHandler
             return;
         }
 
-        PrintWithColor("\n\n[!] Неверная команда.", ConsoleColor.White,ConsoleColor.Red);
+        PrintWithColor("\n\n[!] Неверная команда.", ConsoleColor.White, ConsoleColor.Red);
         AwaitCommand();
     }
-    
+
     private string RepresentToBase2(long number)
     {
         string binaryRepresentation = Convert.ToString(number, 2);
         string result = "";
         for (int i = 64; i > binaryRepresentation.Length; i--)
             result += "0";
-        
+
         return result += binaryRepresentation;
     }
-    
+
     private void PrintSelectedSector(string number, int sector)
     {
         sector = 16 - sector;
@@ -112,7 +140,11 @@ class BitArrayHandler
         Console.WriteLine();
     }
 
-    private void PrintWithColor(string text, ConsoleColor textColor = ConsoleColor.White, ConsoleColor backColor = ConsoleColor.Black)
+    private void PrintWithColor(
+        string text,
+        ConsoleColor textColor = ConsoleColor.White,
+        ConsoleColor backColor = ConsoleColor.Black
+    )
     {
         Console.ForegroundColor = textColor;
         Console.BackgroundColor = backColor;

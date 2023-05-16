@@ -1,9 +1,9 @@
 ﻿using System;
+
 namespace arrays1;
 
 internal class Program
 {
-
     private static int[] InputIntArray(int arrayLength)
     {
         int[] array = new int[arrayLength];
@@ -29,7 +29,7 @@ internal class Program
         Console.WriteLine("Введите длину массива");
         int n = Convert.ToInt32(Console.ReadLine());
         int[] array = InputIntArray(n);
-        
+
         Console.WriteLine("\nВывод элементов массива:");
         PrintArray(array);
     }

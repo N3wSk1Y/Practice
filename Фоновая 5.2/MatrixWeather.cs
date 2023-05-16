@@ -2,11 +2,17 @@ namespace phone52;
 
 public class MatrixWeather
 {
-    private static int[,] mTemperature = new int[,] { { -12, 3 }, { -5, 14 }, { 10, 22 }, { -2, 13 } };
+    private static int[,] mTemperature = new int[,]
+    {
+        { -12, 3 },
+        { -5, 14 },
+        { 10, 22 },
+        { -2, 13 }
+    };
     private static readonly int noData = -1000;
     private static readonly int[] DaysInMonths = { 31, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30 };
     private static Random rnd = new Random();
-    
+
     private Month month;
     private int day;
     private int[,] temperature;
@@ -15,7 +21,7 @@ public class MatrixWeather
     {
         get { return MatrixWeather.DaysInMonths[(int)this.month]; }
     }
-    
+
     public int Day
     {
         get { return this.day; }
@@ -27,7 +33,7 @@ public class MatrixWeather
                 for (int i = this.day; i < this.day + this.DaysInMonth; i++)
                 {
                     buff[i - this.day] = this.temperature[i / 7, i % 7];
-                }                        
+                }
 
                 this.day = value;
                 int daysNum = this.day + this.DaysInMonth;
@@ -38,8 +44,11 @@ public class MatrixWeather
                     if (i < this.day || i >= this.DaysInMonth + this.day)
                     {
                         this.temperature[i / 7, i % 7] = MatrixWeather.noData;
-                    }                            
-                    else {this.temperature[i / 7, i % 7] = buff[i - this.day];}
+                    }
+                    else
+                    {
+                        this.temperature[i / 7, i % 7] = buff[i - this.day];
+                    }
                 }
             }
         }
@@ -109,28 +118,35 @@ public class MatrixWeather
         }
         Console.WriteLine();
     }
-    
+
     public int HighestRise()
     {
         int temp = -10001;
-        for (int i = day+1; i < this.DaysInMonth + day; i++)
+        for (int i = day + 1; i < this.DaysInMonth + day; i++)
         {
-            if (temperature[i/7,i%7] - temperature[(i-1) / 7,(i-1) % 7] > temp) { temp = temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7]; }
+            if (temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7] > temp)
+            {
+                temp = temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7];
+            }
         }
         return temp;
     }
-    
+
     public int HighestRise(out int input)
     {
         input = -1;
         int temp = -10001;
-        for (int i = day+1; i < this.DaysInMonth + day; i++)
+        for (int i = day + 1; i < this.DaysInMonth + day; i++)
         {
-            if (temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7] > temp) { temp = temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7]; input = i - day; }
+            if (temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7] > temp)
+            {
+                temp = temperature[i / 7, i % 7] - temperature[(i - 1) / 7, (i - 1) % 7];
+                input = i - day;
+            }
         }
         return temp;
     }
-    
+
     public static MatrixWeather Create()
     {
         return new MatrixWeather();
@@ -144,10 +160,12 @@ public class MatrixWeather
         }
         else
         {
-            throw new Exception("День недели указан некорректно. Необходимо число в диапазоне от 1 до 7.");
+            throw new Exception(
+                "День недели указан некорректно. Необходимо число в диапазоне от 1 до 7."
+            );
         }
     }
-    
+
     public static void Randomize(ref int[,] temperature, int day, int month)
     {
         for (int i = 0; i < MatrixWeather.DaysInMonths[month] + day; i++)
@@ -158,11 +176,14 @@ public class MatrixWeather
             }
             else
             {
-                temperature[i / 7, i % 7] = rnd.Next(MatrixWeather.mTemperature[month / 3, 0], MatrixWeather.mTemperature[month / 3, 1]);
+                temperature[i / 7, i % 7] = rnd.Next(
+                    MatrixWeather.mTemperature[month / 3, 0],
+                    MatrixWeather.mTemperature[month / 3, 1]
+                );
             }
         }
     }
-    
+
     private static Month GenerateRandomMonth()
     {
         Random random = new Random();

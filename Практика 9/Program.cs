@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace practice9;
 
 internal class Program
@@ -10,8 +11,8 @@ internal class Program
         Console.WriteLine(day & month);
         Console.WriteLine(day | month);
         Console.WriteLine(day ^ month);
-        Console.WriteLine(~ day);
-        Console.WriteLine(~ month);
+        Console.WriteLine(~day);
+        Console.WriteLine(~month);
         Console.WriteLine(day >> 1);
         Console.WriteLine(month << 2);
     }
@@ -31,10 +32,12 @@ internal class Program
             Console.Write((a & m) == 0 ? 0 : 1);
         }
     }
-    
+
     public static void Main(string[] args)
     {
-        int X = 5, N = 2, a = 7;
+        int X = 5,
+            N = 2,
+            a = 7;
         Console.WriteLine(Task2(X, N));
         Task3(a);
     }
